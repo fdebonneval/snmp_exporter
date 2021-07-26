@@ -1,0 +1,636 @@
+level=info ts=2021-06-29T16:17:12.378Z caller=net_snmp.go:144 msg="Loading MIBs" from=/data/mibs
+level=warn ts=2021-06-29T16:17:12.404Z caller=main.go:120 msg="NetSNMP reported parse error(s)" errors=3
+1 iso OTHER "" "" [] map[] 
+1.3 org OTHER "" "" [] map[] 
+1.3.6 dod OTHER "" "" [] map[] 
+1.3.6.1 internet OTHER "" "" [] map[] 
+1.3.6.1.1 directory OTHER "" "" [] map[] 
+1.3.6.1.2 mgmt OTHER "" "" [] map[] 
+1.3.6.1.2.1 mib-2 OTHER "" "" [] map[] 
+1.3.6.1.2.1.1 system OTHER "" "" [] map[] 
+1.3.6.1.2.1.1.1 sysDescr DisplayString "DisplayString" "255a" [] map[] A textual description of the entity
+1.3.6.1.2.1.1.2 sysObjectID OBJID "" "" [] map[] The vendor's authoritative identification of the network management subsystem contained in the entity
+1.3.6.1.2.1.1.3 sysUpTime TIMETICKS "" "" [] map[] The time (in hundredths of a second) since the network management portion of the system was last re-initialized.
+1.3.6.1.2.1.1.4 sysContact DisplayString "DisplayString" "255a" [] map[] The textual identification of the contact person for this managed node, together with information on how to contact this person
+1.3.6.1.2.1.1.5 sysName DisplayString "DisplayString" "255a" [] map[] An administratively-assigned name for this managed node
+1.3.6.1.2.1.1.6 sysLocation DisplayString "DisplayString" "255a" [] map[] The physical location of this node (e.g., 'telephone closet, 3rd floor')
+1.3.6.1.2.1.1.7 sysServices INTEGER "" "" [] map[] A value which indicates the set of services that this entity may potentially offer
+1.3.6.1.2.1.1.8 sysORLastChange TIMETICKS "TimeStamp" "" [] map[] The value of sysUpTime at the time of the most recent change in state or value of any instance of sysORID.
+1.3.6.1.2.1.1.9 sysORTable OTHER "" "" [] map[] The (conceptual) table listing the capabilities of the local SNMP application acting as a command responder with respect to various MIB modules
+1.3.6.1.2.1.1.9.1 sysOREntry OTHER "" "" [sysORIndex] map[] An entry (conceptual row) in the sysORTable.
+1.3.6.1.2.1.1.9.1.1 sysORIndex INTEGER "" "" [sysORIndex] map[] The auxiliary variable used for identifying instances of the columnar objects in the sysORTable.
+1.3.6.1.2.1.1.9.1.2 sysORID OBJID "" "" [sysORIndex] map[] An authoritative identification of a capabilities statement with respect to various MIB modules supported by the local SNMP application acting as a command responder.
+1.3.6.1.2.1.1.9.1.3 sysORDescr DisplayString "DisplayString" "255a" [sysORIndex] map[] A textual description of the capabilities identified by the corresponding instance of sysORID.
+1.3.6.1.2.1.1.9.1.4 sysORUpTime TIMETICKS "TimeStamp" "" [sysORIndex] map[] The value of sysUpTime at the time this conceptual row was last instantiated.
+1.3.6.1.2.1.2 interfaces OTHER "" "" [] map[] 
+1.3.6.1.2.1.2.1 ifNumber INTEGER32 "" "" [] map[] The number of network interfaces (regardless of their current state) present on this system.
+1.3.6.1.2.1.2.2 ifTable OTHER "" "" [] map[] A list of interface entries
+1.3.6.1.2.1.2.2.1 ifEntry OTHER "" "" [ifIndex] map[] An entry containing management information applicable to a particular interface.
+1.3.6.1.2.1.2.2.1.1 ifIndex INTEGER32 "InterfaceIndex" "d" [ifIndex] map[] A unique value, greater than zero, for each interface
+1.3.6.1.2.1.2.2.1.2 ifDescr DisplayString "DisplayString" "255a" [ifIndex] map[] A textual string containing information about the interface
+1.3.6.1.2.1.2.2.1.3 ifType OTHER "" "" [ifIndex] map[] The type of interface
+1.3.6.1.2.1.2.2.1.4 ifMtu INTEGER32 "" "" [ifIndex] map[] The size of the largest packet which can be sent/received on the interface, specified in octets
+1.3.6.1.2.1.2.2.1.5 ifSpeed GAUGE "" "" [ifIndex] map[] An estimate of the interface's current bandwidth in bits per second
+1.3.6.1.2.1.2.2.1.6 ifPhysAddress PhysAddress48 "PhysAddress" "1x:" [ifIndex] map[] The interface's address at its protocol sub-layer
+1.3.6.1.2.1.2.2.1.7 ifAdminStatus INTEGER "" "" [ifIndex] map[1:up 2:down 3:testing] The desired state of the interface
+1.3.6.1.2.1.2.2.1.8 ifOperStatus INTEGER "" "" [ifIndex] map[1:up 2:down 3:testing 4:unknown 5:dormant 6:notPresent 7:lowerLayerDown] The current operational state of the interface
+1.3.6.1.2.1.2.2.1.9 ifLastChange TIMETICKS "" "" [ifIndex] map[] The value of sysUpTime at the time the interface entered its current operational state
+1.3.6.1.2.1.2.2.1.10 ifInOctets COUNTER "" "" [ifIndex] map[] The total number of octets received on the interface, including framing characters
+1.3.6.1.2.1.2.2.1.11 ifInUcastPkts COUNTER "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were not addressed to a multicast or broadcast address at this sub-layer
+1.3.6.1.2.1.2.2.1.12 ifInNUcastPkts COUNTER "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a multicast or broadcast address at this sub-layer
+1.3.6.1.2.1.2.2.1.13 ifInDiscards COUNTER "" "" [ifIndex] map[] The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol
+1.3.6.1.2.1.2.2.1.14 ifInErrors COUNTER "" "" [ifIndex] map[] For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol
+1.3.6.1.2.1.2.2.1.15 ifInUnknownProtos COUNTER "" "" [ifIndex] map[] For packet-oriented interfaces, the number of packets received via the interface which were discarded because of an unknown or unsupported protocol
+1.3.6.1.2.1.2.2.1.16 ifOutOctets COUNTER "" "" [ifIndex] map[] The total number of octets transmitted out of the interface, including framing characters
+1.3.6.1.2.1.2.2.1.17 ifOutUcastPkts COUNTER "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.2.2.1.18 ifOutNUcastPkts COUNTER "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.2.2.1.19 ifOutDiscards COUNTER "" "" [ifIndex] map[] The number of outbound packets which were chosen to be discarded even though no errors had been detected to prevent their being transmitted
+1.3.6.1.2.1.2.2.1.20 ifOutErrors COUNTER "" "" [ifIndex] map[] For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors
+1.3.6.1.2.1.2.2.1.21 ifOutQLen GAUGE "" "" [ifIndex] map[] The length of the output packet queue (in packets).
+1.3.6.1.2.1.2.2.1.22 ifSpecific OBJID "" "" [ifIndex] map[] A reference to MIB definitions specific to the particular media being used to realize the interface
+1.3.6.1.2.1.10 transmission OTHER "" "" [] map[] 
+1.3.6.1.2.1.11 snmp OTHER "" "" [] map[] 
+1.3.6.1.2.1.11.1 snmpInPkts COUNTER "" "" [] map[] The total number of messages delivered to the SNMP entity from the transport service.
+1.3.6.1.2.1.11.2 snmpOutPkts COUNTER "" "" [] map[] The total number of SNMP Messages which were passed from the SNMP protocol entity to the transport service.
+1.3.6.1.2.1.11.3 snmpInBadVersions COUNTER "" "" [] map[] The total number of SNMP messages which were delivered to the SNMP entity and were for an unsupported SNMP version.
+1.3.6.1.2.1.11.4 snmpInBadCommunityNames COUNTER "" "" [] map[] The total number of community-based SNMP messages (for example, SNMPv1) delivered to the SNMP entity which used an SNMP community name not known to said entity
+1.3.6.1.2.1.11.5 snmpInBadCommunityUses COUNTER "" "" [] map[] The total number of community-based SNMP messages (for example, SNMPv1) delivered to the SNMP entity which represented an SNMP operation that was not allowed for the SNMP community named in the message
+1.3.6.1.2.1.11.6 snmpInASNParseErrs COUNTER "" "" [] map[] The total number of ASN.1 or BER errors encountered by the SNMP entity when decoding received SNMP messages.
+1.3.6.1.2.1.11.8 snmpInTooBigs COUNTER "" "" [] map[] The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `tooBig'.
+1.3.6.1.2.1.11.9 snmpInNoSuchNames COUNTER "" "" [] map[] The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `noSuchName'.
+1.3.6.1.2.1.11.10 snmpInBadValues COUNTER "" "" [] map[] The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `badValue'.
+1.3.6.1.2.1.11.11 snmpInReadOnlys COUNTER "" "" [] map[] The total number valid SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `readOnly'
+1.3.6.1.2.1.11.12 snmpInGenErrs COUNTER "" "" [] map[] The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `genErr'.
+1.3.6.1.2.1.11.13 snmpInTotalReqVars COUNTER "" "" [] map[] The total number of MIB objects which have been retrieved successfully by the SNMP protocol entity as the result of receiving valid SNMP Get-Request and Get-Next PDUs.
+1.3.6.1.2.1.11.14 snmpInTotalSetVars COUNTER "" "" [] map[] The total number of MIB objects which have been altered successfully by the SNMP protocol entity as the result of receiving valid SNMP Set-Request PDUs.
+1.3.6.1.2.1.11.15 snmpInGetRequests COUNTER "" "" [] map[] The total number of SNMP Get-Request PDUs which have been accepted and processed by the SNMP protocol entity.
+1.3.6.1.2.1.11.16 snmpInGetNexts COUNTER "" "" [] map[] The total number of SNMP Get-Next PDUs which have been accepted and processed by the SNMP protocol entity.
+1.3.6.1.2.1.11.17 snmpInSetRequests COUNTER "" "" [] map[] The total number of SNMP Set-Request PDUs which have been accepted and processed by the SNMP protocol entity.
+1.3.6.1.2.1.11.18 snmpInGetResponses COUNTER "" "" [] map[] The total number of SNMP Get-Response PDUs which have been accepted and processed by the SNMP protocol entity.
+1.3.6.1.2.1.11.19 snmpInTraps COUNTER "" "" [] map[] The total number of SNMP Trap PDUs which have been accepted and processed by the SNMP protocol entity.
+1.3.6.1.2.1.11.20 snmpOutTooBigs COUNTER "" "" [] map[] The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field was `tooBig.'
+1.3.6.1.2.1.11.21 snmpOutNoSuchNames COUNTER "" "" [] map[] The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status was `noSuchName'.
+1.3.6.1.2.1.11.22 snmpOutBadValues COUNTER "" "" [] map[] The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field was `badValue'.
+1.3.6.1.2.1.11.24 snmpOutGenErrs COUNTER "" "" [] map[] The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field was `genErr'.
+1.3.6.1.2.1.11.25 snmpOutGetRequests COUNTER "" "" [] map[] The total number of SNMP Get-Request PDUs which have been generated by the SNMP protocol entity.
+1.3.6.1.2.1.11.26 snmpOutGetNexts COUNTER "" "" [] map[] The total number of SNMP Get-Next PDUs which have been generated by the SNMP protocol entity.
+1.3.6.1.2.1.11.27 snmpOutSetRequests COUNTER "" "" [] map[] The total number of SNMP Set-Request PDUs which have been generated by the SNMP protocol entity.
+1.3.6.1.2.1.11.28 snmpOutGetResponses COUNTER "" "" [] map[] The total number of SNMP Get-Response PDUs which have been generated by the SNMP protocol entity.
+1.3.6.1.2.1.11.29 snmpOutTraps COUNTER "" "" [] map[] The total number of SNMP Trap PDUs which have been generated by the SNMP protocol entity.
+1.3.6.1.2.1.11.30 snmpEnableAuthenTraps INTEGER "" "" [] map[1:enabled 2:disabled] Indicates whether the SNMP entity is permitted to generate authenticationFailure traps
+1.3.6.1.2.1.11.31 snmpSilentDrops COUNTER "" "" [] map[] The total number of Confirmed Class PDUs (such as GetRequest-PDUs, GetNextRequest-PDUs, GetBulkRequest-PDUs, SetRequest-PDUs, and InformRequest-PDUs) delivered to the SNMP entity which were silently dropped because the size of a reply containing an alternate Response Class PDU (such as a Response-PDU) with an empty variable-bindings field was greater than either a local constraint or the maximum message size associated with the originator of the request.
+1.3.6.1.2.1.11.32 snmpProxyDrops COUNTER "" "" [] map[] The total number of Confirmed Class PDUs (such as GetRequest-PDUs, GetNextRequest-PDUs, GetBulkRequest-PDUs, SetRequest-PDUs, and InformRequest-PDUs) delivered to the SNMP entity which were silently dropped because the transmission of the (possibly translated) message to a proxy target failed in a manner (other than a time-out) such that no Response Class PDU (such as a Response-PDU) could be returned.
+1.3.6.1.2.1.31 ifMIB MODID "" "" [] map[] The MIB module to describe generic objects for network interface sub-layers
+1.3.6.1.2.1.31.1 ifMIBObjects OTHER "" "" [] map[] 
+1.3.6.1.2.1.31.1.1 ifXTable OTHER "" "" [] map[] A list of interface entries
+1.3.6.1.2.1.31.1.1.1 ifXEntry OTHER "" "" [ifIndex] map[] An entry containing additional management information applicable to a particular interface.
+1.3.6.1.2.1.31.1.1.1.1 ifName DisplayString "DisplayString" "255a" [ifIndex] map[] The textual name of the interface
+1.3.6.1.2.1.31.1.1.1.2 ifInMulticastPkts COUNTER "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a multicast address at this sub-layer
+1.3.6.1.2.1.31.1.1.1.3 ifInBroadcastPkts COUNTER "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a broadcast address at this sub-layer
+1.3.6.1.2.1.31.1.1.1.4 ifOutMulticastPkts COUNTER "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a multicast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.31.1.1.1.5 ifOutBroadcastPkts COUNTER "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a broadcast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.31.1.1.1.6 ifHCInOctets COUNTER64 "" "" [ifIndex] map[] The total number of octets received on the interface, including framing characters
+1.3.6.1.2.1.31.1.1.1.7 ifHCInUcastPkts COUNTER64 "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were not addressed to a multicast or broadcast address at this sub-layer
+1.3.6.1.2.1.31.1.1.1.8 ifHCInMulticastPkts COUNTER64 "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a multicast address at this sub-layer
+1.3.6.1.2.1.31.1.1.1.9 ifHCInBroadcastPkts COUNTER64 "" "" [ifIndex] map[] The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a broadcast address at this sub-layer
+1.3.6.1.2.1.31.1.1.1.10 ifHCOutOctets COUNTER64 "" "" [ifIndex] map[] The total number of octets transmitted out of the interface, including framing characters
+1.3.6.1.2.1.31.1.1.1.11 ifHCOutUcastPkts COUNTER64 "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.31.1.1.1.12 ifHCOutMulticastPkts COUNTER64 "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a multicast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.31.1.1.1.13 ifHCOutBroadcastPkts COUNTER64 "" "" [ifIndex] map[] The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a broadcast address at this sub-layer, including those that were discarded or not sent
+1.3.6.1.2.1.31.1.1.1.14 ifLinkUpDownTrapEnable INTEGER "" "" [ifIndex] map[1:enabled 2:disabled] Indicates whether linkUp/linkDown traps should be generated for this interface
+1.3.6.1.2.1.31.1.1.1.15 ifHighSpeed GAUGE "" "" [ifIndex] map[] An estimate of the interface's current bandwidth in units of 1,000,000 bits per second
+1.3.6.1.2.1.31.1.1.1.16 ifPromiscuousMode INTEGER "TruthValue" "" [ifIndex] map[1:true 2:false] This object has a value of false(2) if this interface only accepts packets/frames that are addressed to this station
+1.3.6.1.2.1.31.1.1.1.17 ifConnectorPresent INTEGER "TruthValue" "" [ifIndex] map[1:true 2:false] This object has the value 'true(1)' if the interface sublayer has a physical connector and the value 'false(2)' otherwise.
+1.3.6.1.2.1.31.1.1.1.18 ifAlias DisplayString "DisplayString" "255a" [ifIndex] map[] This object is an 'alias' name for the interface as specified by a network manager, and provides a non-volatile 'handle' for the interface
+1.3.6.1.2.1.31.1.1.1.19 ifCounterDiscontinuityTime TIMETICKS "TimeStamp" "" [ifIndex] map[] The value of sysUpTime on the most recent occasion at which any one or more of this interface's counters suffered a discontinuity
+1.3.6.1.2.1.31.1.2 ifStackTable OTHER "" "" [] map[] The table containing information on the relationships between the multiple sub-layers of network interfaces
+1.3.6.1.2.1.31.1.2.1 ifStackEntry OTHER "" "" [ifStackHigherLayer ifStackLowerLayer] map[] Information on a particular relationship between two sub- layers, specifying that one sub-layer runs on 'top' of the other sub-layer
+1.3.6.1.2.1.31.1.2.1.1 ifStackHigherLayer INTEGER32 "InterfaceIndexOrZero" "d" [ifStackHigherLayer ifStackLowerLayer] map[] The value of ifIndex corresponding to the higher sub-layer of the relationship, i.e., the sub-layer which runs on 'top' of the sub-layer identified by the corresponding instance of ifStackLowerLayer
+1.3.6.1.2.1.31.1.2.1.2 ifStackLowerLayer INTEGER32 "InterfaceIndexOrZero" "d" [ifStackHigherLayer ifStackLowerLayer] map[] The value of ifIndex corresponding to the lower sub-layer of the relationship, i.e., the sub-layer which runs 'below' the sub-layer identified by the corresponding instance of ifStackHigherLayer
+1.3.6.1.2.1.31.1.2.1.3 ifStackStatus INTEGER "RowStatus" "" [ifStackHigherLayer ifStackLowerLayer] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] The status of the relationship between two sub-layers
+1.3.6.1.2.1.31.1.3 ifTestTable OTHER "" "" [] map[] This table contains one entry per interface
+1.3.6.1.2.1.31.1.3.1 ifTestEntry OTHER "" "" [ifIndex] map[] An entry containing objects for invoking tests on an interface.
+1.3.6.1.2.1.31.1.3.1.1 ifTestId INTEGER "TestAndIncr" "" [ifIndex] map[] This object identifies the current invocation of the interface's test.
+1.3.6.1.2.1.31.1.3.1.2 ifTestStatus INTEGER "" "" [ifIndex] map[1:notInUse 2:inUse] This object indicates whether or not some manager currently has the necessary 'ownership' required to invoke a test on this interface
+1.3.6.1.2.1.31.1.3.1.3 ifTestType OBJID "AutonomousType" "" [ifIndex] map[] A control variable used to start and stop operator- initiated interface tests
+1.3.6.1.2.1.31.1.3.1.4 ifTestResult INTEGER "" "" [ifIndex] map[1:none 2:success 3:inProgress 4:notSupported 5:unAbleToRun 6:aborted 7:failed] This object contains the result of the most recently requested test, or the value none(1) if no tests have been requested since the last reset
+1.3.6.1.2.1.31.1.3.1.5 ifTestCode OBJID "" "" [ifIndex] map[] This object contains a code which contains more specific information on the test result, for example an error-code after a failed test
+1.3.6.1.2.1.31.1.3.1.6 ifTestOwner DisplayString "OwnerString" "255a" [ifIndex] map[] The entity which currently has the 'ownership' required to invoke a test on this interface.
+1.3.6.1.2.1.31.1.4 ifRcvAddressTable OTHER "" "" [] map[] This table contains an entry for each address (broadcast, multicast, or uni-cast) for which the system will receive packets/frames on a particular interface, except as follows: - for an interface operating in promiscuous mode, entries are only required for those addresses for which the system would receive frames were it not operating in promiscuous mode
+1.3.6.1.2.1.31.1.4.1 ifRcvAddressEntry OTHER "" "" [ifIndex ifRcvAddressAddress] map[] A list of objects identifying an address for which the system will accept packets/frames on the particular interface identified by the index value ifIndex.
+1.3.6.1.2.1.31.1.4.1.1 ifRcvAddressAddress PhysAddress48 "PhysAddress" "1x:" [ifIndex ifRcvAddressAddress] map[] An address for which the system will accept packets/frames on this entry's interface.
+1.3.6.1.2.1.31.1.4.1.2 ifRcvAddressStatus INTEGER "RowStatus" "" [ifIndex ifRcvAddressAddress] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] This object is used to create and delete rows in the ifRcvAddressTable.
+1.3.6.1.2.1.31.1.4.1.3 ifRcvAddressType INTEGER "" "" [ifIndex ifRcvAddressAddress] map[1:other 2:volatile 3:nonVolatile] This object has the value nonVolatile(3) for those entries in the table which are valid and will not be deleted by the next restart of the managed system
+1.3.6.1.2.1.31.1.5 ifTableLastChange TIMETICKS "" "" [] map[] The value of sysUpTime at the time of the last creation or deletion of an entry in the ifTable
+1.3.6.1.2.1.31.1.6 ifStackLastChange TIMETICKS "" "" [] map[] The value of sysUpTime at the time of the last change of the (whole) interface stack
+1.3.6.1.2.1.31.2 ifConformance OTHER "" "" [] map[] 
+1.3.6.1.2.1.31.2.1 ifGroups OTHER "" "" [] map[] 
+1.3.6.1.2.1.31.2.1.1 ifGeneralGroup OBJGROUP "" "" [] map[] A collection of objects deprecated in favour of ifGeneralInformationGroup.
+1.3.6.1.2.1.31.2.1.2 ifFixedLengthGroup OBJGROUP "" "" [] map[] A collection of objects providing information specific to non-high speed (non-high speed interfaces transmit and receive at speeds less than or equal to 20,000,000 bits/second) character-oriented or fixed-length-transmission network interfaces.
+1.3.6.1.2.1.31.2.1.3 ifHCFixedLengthGroup OBJGROUP "" "" [] map[] A collection of objects providing information specific to high speed (greater than 20,000,000 bits/second) character- oriented or fixed-length-transmission network interfaces.
+1.3.6.1.2.1.31.2.1.4 ifPacketGroup OBJGROUP "" "" [] map[] A collection of objects providing information specific to non-high speed (non-high speed interfaces transmit and receive at speeds less than or equal to 20,000,000 bits/second) packet-oriented network interfaces.
+1.3.6.1.2.1.31.2.1.5 ifHCPacketGroup OBJGROUP "" "" [] map[] A collection of objects providing information specific to high speed (greater than 20,000,000 bits/second but less than or equal to 650,000,000 bits/second) packet-oriented network interfaces.
+1.3.6.1.2.1.31.2.1.6 ifVHCPacketGroup OBJGROUP "" "" [] map[] A collection of objects providing information specific to higher speed (greater than 650,000,000 bits/second) packet- oriented network interfaces.
+1.3.6.1.2.1.31.2.1.7 ifRcvAddressGroup OBJGROUP "" "" [] map[] A collection of objects providing information on the multiple addresses which an interface receives.
+1.3.6.1.2.1.31.2.1.8 ifTestGroup OBJGROUP "" "" [] map[] A collection of objects providing the ability to invoke tests on an interface.
+1.3.6.1.2.1.31.2.1.9 ifStackGroup OBJGROUP "" "" [] map[] The previous collection of objects providing information on the layering of MIB-II interfaces.
+1.3.6.1.2.1.31.2.1.10 ifGeneralInformationGroup OBJGROUP "" "" [] map[] A collection of objects providing information applicable to all network interfaces.
+1.3.6.1.2.1.31.2.1.11 ifStackGroup2 OBJGROUP "" "" [] map[] A collection of objects providing information on the layering of MIB-II interfaces.
+1.3.6.1.2.1.31.2.1.12 ifOldObjectsGroup OBJGROUP "" "" [] map[] The collection of objects deprecated from the original MIB- II interfaces group.
+1.3.6.1.2.1.31.2.1.13 ifCounterDiscontinuityGroup OBJGROUP "" "" [] map[] A collection of objects providing information specific to interface counter discontinuities.
+1.3.6.1.2.1.31.2.1.14 linkUpDownNotificationsGroup NOTIFGROUP "" "" [] map[] The notifications which indicate specific changes in the value of ifOperStatus.
+1.3.6.1.2.1.31.2.2 ifCompliances OTHER "" "" [] map[] 
+1.3.6.1.2.1.31.2.2.1 ifCompliance MODCOMP "" "" [] map[] A compliance statement defined in a previous version of this MIB module, for SNMP entities which have network interfaces.
+1.3.6.1.2.1.31.2.2.2 ifCompliance2 MODCOMP "" "" [] map[] A compliance statement defined in a previous version of this MIB module, for SNMP entities which have network interfaces.
+1.3.6.1.2.1.31.2.2.3 ifCompliance3 MODCOMP "" "" [] map[] The compliance statement for SNMP entities which have network interfaces.
+1.3.6.1.3 experimental OTHER "" "" [] map[] 
+1.3.6.1.4 private OTHER "" "" [] map[] 
+1.3.6.1.4.1 enterprises OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770 bachmann MODID "" "" [] map[] The Structure of Management Information Base for the enterprise Bachmann GmbH.
+1.3.6.1.4.1.31770.2 blueNet2Mib MODID "" "" [] map[] The MIB module for representing BlueNet2 PDU SNMP agent implementation version v1.01.00.
+1.3.6.1.4.1.31770.2.0 blueNet2Notifications OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.0.0 blueNet2NotificationPrefix OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.0.0.1 blueNet2PduStatusOkNotification NOTIFTYPE "" "" [] map[] PDU status ok.
+1.3.6.1.4.1.31770.2.0.0.2 blueNet2PduStatusWarningNotification NOTIFTYPE "" "" [] map[] PDU status warning.
+1.3.6.1.4.1.31770.2.0.0.3 blueNet2PduStatusAlarmNotification NOTIFTYPE "" "" [] map[] PDU status alarm.
+1.3.6.1.4.1.31770.2.0.0.4 blueNet2SensorStatusOkNotification NOTIFTYPE "" "" [] map[] Sensor status ok.
+1.3.6.1.4.1.31770.2.0.0.5 blueNet2SensorStatusWarningNotification NOTIFTYPE "" "" [] map[] Sensor status warning.
+1.3.6.1.4.1.31770.2.0.0.6 blueNet2SensorStatusAlarmNotification NOTIFTYPE "" "" [] map[] Sensor status alarm.
+1.3.6.1.4.1.31770.2.0.0.7 blueNet2VariableStatusOkNotification NOTIFTYPE "" "" [] map[] Variable status ok.
+1.3.6.1.4.1.31770.2.0.0.8 blueNet2VariableLowerWarningNotification NOTIFTYPE "" "" [] map[] Variable status lower warning.
+1.3.6.1.4.1.31770.2.0.0.9 blueNet2VariableUpperWarningNotification NOTIFTYPE "" "" [] map[] Variable status upper warning.
+1.3.6.1.4.1.31770.2.0.0.10 blueNet2VariableLowerAlarmNotification NOTIFTYPE "" "" [] map[] Variable status lower alarm.
+1.3.6.1.4.1.31770.2.0.0.11 blueNet2VariableUpperAlarmNotification NOTIFTYPE "" "" [] map[] Variable status upper alarm.
+1.3.6.1.4.1.31770.2.0.0.98 blueNet2ReconfigAgentNotification NOTIFTYPE "" "" [] map[] Agent reconfiguration.
+1.3.6.1.4.1.31770.2.0.0.99 blueNet2ShutdownAgentNotification NOTIFTYPE "" "" [] map[] Agent shutdown.
+1.3.6.1.4.1.31770.2.1 blueNet2Products OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2 blueNet2Objects OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.1 blueNet2Identification OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.1.1 blueNet2IdProductVendor DisplayString "DisplayString" "255a" [] map[] BlueNet2 vendor name.
+1.3.6.1.4.1.31770.2.2.1.2 blueNet2IdProductName DisplayString "DisplayString" "255a" [] map[] BlueNet2 product name.
+1.3.6.1.4.1.31770.2.2.1.3 blueNet2IdProductURI DisplayString "DisplayString" "255a" [] map[] URI of BlueNet2 PDU product.
+1.3.6.1.4.1.31770.2.2.1.4 blueNet2IdProductPartNr DisplayString "DisplayString" "255a" [] map[] Part number of BlueNet2 PDU product.
+1.3.6.1.4.1.31770.2.2.1.5 blueNet2IdProductSNr DisplayString "DisplayString" "255a" [] map[] Unique serial number of BlueNet2 PDU product.
+1.3.6.1.4.1.31770.2.2.1.6 blueNet2IdProductDate DisplayString "DisplayString" "255a" [] map[] Production date of BlueNet2 PDU product.
+1.3.6.1.4.1.31770.2.2.1.7 blueNet2IdProductFacility INTEGER "" "" [] map[0:neutralCurrent 1:fuse 2:rcd 3:identify 4:switch 5:oneInlet 6:monitoredPerOutlet 7:monitoredPerPhase 8:spd] Functional product facility of BlueNet2 PDU product
+1.3.6.1.4.1.31770.2.2.1.8 blueNet2IdProductCaps UNSIGNED32 "" "" [] map[] Capabilities of BlueNet2 PDU product as referred in BACHMANN-BLUENET2-CAPABILITY-MIB blueNet2Capabilities
+1.3.6.1.4.1.31770.2.2.1.9 blueNet2IdProductFwV DisplayString "DisplayString" "255a" [] map[] Hardware revision of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.1.10 blueNet2IdProductHwV DisplayString "DisplayString" "255a" [] map[] Hardware revision of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.1.11 blueNet2IdProductSwV DisplayString "DisplayString" "255a" [] map[] Software revision of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.1.12 blueNet2IdProductOsV DisplayString "DisplayString" "255a" [] map[] Operating system revision of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.1.13 blueNet2IdProductArch DisplayString "DisplayString" "255a" [] map[] Operating system cpu architecture of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.1.14 blueNet2IdProductMAC DisplayString "DisplayString" "255a" [] map[] Ethernet MAC address of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.2 blueNet2Information OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.2.1 blueNet2InfoUpTime UNSIGNED32 "" "" [] map[] Uptime of the BlueNet2 PDU operating system in seconds
+1.3.6.1.4.1.31770.2.2.2.2 blueNet2InfoOverallStatus INTEGER "BlueNet2ComponentStates" "" [] map[1:ok 2:warning 3:alarm] General hadware status of BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.2.3 blueNet2InfoNumberOfChanges UNSIGNED32 "" "" [] map[] The number of global configuration changes.
+1.3.6.1.4.1.31770.2.2.2.4 blueNet2InfoLastChange TIMETICKS "" "" [] map[] The value of the sysUpTime object at which the last change in global configuration happened.
+1.3.6.1.4.1.31770.2.2.2.5 blueNet2InfoAccumulatedStatus PhysAddress48(8) "BlueNet2EntityBits" "1x:" [] map[] A bit field of all current states.
+1.3.6.1.4.1.31770.2.2.2.6 blueNet2InfoLoadTable OTHER "" "" [] map[] A list of system load entries.
+1.3.6.1.4.1.31770.2.2.2.6.1 blueNet2InfoLoadEntry OTHER "" "" [blueNet2InfoLoadIndex] map[] Entries of system load table.
+1.3.6.1.4.1.31770.2.2.2.6.1.1 blueNet2InfoLoadIndex UNSIGNED32 "" "" [blueNet2InfoLoadIndex] map[] Index for the system load table
+1.3.6.1.4.1.31770.2.2.2.6.1.2 blueNet2InfoLoadAverage UNSIGNED32 "" "" [blueNet2InfoLoadIndex] map[] System load average multiplied by 100.
+1.3.6.1.4.1.31770.2.2.2.7 blueNet2InfoMessageTable OTHER "" "" [] map[] A table of the last text message per source.
+1.3.6.1.4.1.31770.2.2.2.7.1 blueNet2InfoMessageEntry OTHER "" "" [blueNet2InfoMessageSource] map[] Entries of last message table.
+1.3.6.1.4.1.31770.2.2.2.7.1.1 blueNet2InfoMessageSource INTEGER "BlueNet2InfoMessageSources" "" [blueNet2InfoMessageSource] map[1:other 2:device 3:sensor 4:variable] Source of the text message.
+1.3.6.1.4.1.31770.2.2.2.7.1.2 blueNet2InfoMessageStatus INTEGER "BlueNet2ComponentStates" "" [blueNet2InfoMessageSource] map[1:ok 2:warning 3:alarm] Status of the text message source.
+1.3.6.1.4.1.31770.2.2.2.7.1.3 blueNet2InfoMessageTime TIMETICKS "" "" [blueNet2InfoMessageSource] map[] Timestamp of last received text message according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.2.7.1.4 blueNet2InfoMessageText DisplayString "DisplayString" "255a" [blueNet2InfoMessageSource] map[] Last text message of a source.
+1.3.6.1.4.1.31770.2.2.2.7.1.5 blueNet2InfoMessageNumberOfOks UNSIGNED32 "" "" [blueNet2InfoMessageSource] map[] The accumulated number of ok messages.
+1.3.6.1.4.1.31770.2.2.2.7.1.6 blueNet2InfoMessageNumberOfWarnings UNSIGNED32 "" "" [blueNet2InfoMessageSource] map[] The accumulated number of warning messages.
+1.3.6.1.4.1.31770.2.2.2.7.1.7 blueNet2InfoMessageNumberOfErrors UNSIGNED32 "" "" [blueNet2InfoMessageSource] map[] The accumulated number of error messages.
+1.3.6.1.4.1.31770.2.2.3 blueNet2Configuration OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.1 blueNet2Alias DisplayString "DisplayString" "255a" [] map[] BlueNet2 product alias
+1.3.6.1.4.1.31770.2.2.3.2 blueNet2Language INTEGER "" "" [] map[1:other 2:english 3:german 4:french] Supported display language.
+1.3.6.1.4.1.31770.2.2.3.3 blueNet2DateTime DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [] map[] Date and time of day as set manually or by NTP.
+1.3.6.1.4.1.31770.2.2.3.4 blueNet2Protocols OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.4.1 blueNet2FtpAccess INTEGER "" "" [] map[1:disabled 2:enabled] Ftp access status.
+1.3.6.1.4.1.31770.2.2.3.4.2 blueNet2FtpPort UNSIGNED32 "" "" [] map[] TCP/IP port of FTP daemon.
+1.3.6.1.4.1.31770.2.2.3.4.3 blueNet2HttpAccess BITSTRING "" "" [] map[0:httpEnabled 1:httpsEnabled] HTTP/HTTPS access status.
+1.3.6.1.4.1.31770.2.2.3.4.4 blueNet2HttpPort UNSIGNED32 "" "" [] map[] TCP/IP port of HTTP daemon.
+1.3.6.1.4.1.31770.2.2.3.4.5 blueNet2HttpsPort UNSIGNED32 "" "" [] map[] TCP/IP port of HTTPS daemon.
+1.3.6.1.4.1.31770.2.2.3.4.6 blueNet2SftpAccess INTEGER "" "" [] map[1:disabled 2:enabled] Sftp access status.
+1.3.6.1.4.1.31770.2.2.3.4.7 blueNet2SftpPort UNSIGNED32 "" "" [] map[] TCP/IP port of SFTP daemon.
+1.3.6.1.4.1.31770.2.2.3.4.8 blueNet2SshAccess INTEGER "" "" [] map[1:disabled 2:enabled] Ssh access status.
+1.3.6.1.4.1.31770.2.2.3.4.9 blueNet2SshPort UNSIGNED32 "" "" [] map[] TCP/IP port of SSH daemon.
+1.3.6.1.4.1.31770.2.2.3.4.10 blueNet2TelnetAccess INTEGER "" "" [] map[1:disabled 2:enabled] Telnet access status.
+1.3.6.1.4.1.31770.2.2.3.4.11 blueNet2TelnetPort UNSIGNED32 "" "" [] map[] TCP/IP port of telnet daemon.
+1.3.6.1.4.1.31770.2.2.3.4.12 blueNet2Snmp OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.4.12.1 blueNet2SnmpVersions BITSTRING "" "" [] map[0:snmpv1 1:snmpv2c 2:snmpv3] Supported and enabled SNMP versions.
+1.3.6.1.4.1.31770.2.2.3.4.12.2 blueNet2MaxTrapReceivers UNSIGNED32 "" "" [] map[] The maximum number of entries in blueNet2TrapReceiverTable.
+1.3.6.1.4.1.31770.2.2.3.4.12.3 blueNet2TrapReceiverTable OTHER "" "" [] map[] A list of trap receiver entries.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1 blueNet2TrapReceiverEntry OTHER "" "" [blueNet2TrapReceiverIndex] map[] Entries of trapTable.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.1 blueNet2TrapReceiverIndex UNSIGNED32 "" "" [blueNet2TrapReceiverIndex] map[] Index of the trap receiver table.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.2 blueNet2TrapReceiverRowStatus INTEGER "RowStatus" "" [blueNet2TrapReceiverIndex] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] Activate/create/destroy/disable a trap receiver entry.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.3 blueNet2TrapReceiverProtocol INTEGER "" "" [blueNet2TrapReceiverIndex] map[1:snmpv1Trap 2:snmpv2cTrap 3:snmpv2cInform 4:snmpv3Trap 5:snmpv3Inform] Set trap/inform version.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.4 blueNet2TrapReceiverAddress DisplayString "DisplayString" "255a" [blueNet2TrapReceiverIndex] map[] IPv4/IPv6 address or host name of trap receiver.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.5 blueNet2TrapReceiverFriendlyName DisplayString "DisplayString" "255a" [blueNet2TrapReceiverIndex] map[] User friendly name to identify a trap receiver
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.6 blueNet2TrapReceiverDescription DisplayString "DisplayString" "255a" [blueNet2TrapReceiverIndex] map[] Description to identify a trap receiver
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.7 blueNet2TrapReceiverCommunity DisplayString "DisplayString" "255a" [blueNet2TrapReceiverIndex] map[] Community used by SNMPv1 and SNMPv2c to identify at trap receiver address.
+1.3.6.1.4.1.31770.2.2.3.4.12.3.1.8 blueNet2TrapReceiverUsername DisplayString "DisplayString" "255a" [blueNet2TrapReceiverIndex] map[] Username used by SNMPv3 to identify at trap receiver address.
+1.3.6.1.4.1.31770.2.2.3.4.13 blueNet2Modbus OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.4.13.1 blueNet2ModbusVersions BITSTRING "" "" [] map[0:rtu 1:tcp] Supported and enabled modbus version(s).
+1.3.6.1.4.1.31770.2.2.3.4.13.2 blueNet2ModbusService INTEGER "" "" [] map[1:disabled 2:readonly 3:writeonly 4:readwrite] Modbus service status.
+1.3.6.1.4.1.31770.2.2.3.4.13.3 blueNet2ModbusTcpPort UNSIGNED32 "" "" [] map[] TCP/IP port of modbus daemon.
+1.3.6.1.4.1.31770.2.2.3.4.13.4 blueNet2ModbusSerialMode DisplayString "DisplayString" "255a" [] map[] Serial mode configuration parameters (baud,data,parity,stop) of modbus daemon.
+1.3.6.1.4.1.31770.2.2.3.4.13.5 blueNet2MaxModbusTcpMasters UNSIGNED32 "" "" [] map[] The maximum number of entries in blueNet2ModbusTcpTable.
+1.3.6.1.4.1.31770.2.2.3.4.13.6 blueNet2ModbusTcpTable OTHER "" "" [] map[] A list of modbus entries.
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1 blueNet2ModbusTcpEntry OTHER "" "" [blueNet2ModbusTcpIndex] map[] Entries of modbus table.
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1.1 blueNet2ModbusTcpIndex UNSIGNED32 "" "" [blueNet2ModbusTcpIndex] map[] Index of the modbus TCP access table.
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1.2 blueNet2ModbusTcpRowStatus INTEGER "RowStatus" "" [blueNet2ModbusTcpIndex] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] Activate/create/destroy/disable a modbus TCP entry.
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1.3 blueNet2ModbusTcpAccess INTEGER "" "" [blueNet2ModbusTcpIndex] map[1:noaccess 2:readonly 3:writeonly 4:readwrite] Modbus access for this master entry
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1.4 blueNet2ModbusTcpMaster DisplayString "DisplayString" "255a" [blueNet2ModbusTcpIndex] map[] Source to restrict modbus access
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1.5 blueNet2ModbusTcpFriendlyName DisplayString "DisplayString" "255a" [blueNet2ModbusTcpIndex] map[] User friendly name to identify a modbus master
+1.3.6.1.4.1.31770.2.2.3.4.13.6.1.6 blueNet2ModbusTcpDescription DisplayString "DisplayString" "255a" [blueNet2ModbusTcpIndex] map[] Description to identify a modbus master
+1.3.6.1.4.1.31770.2.2.3.4.14 blueNet2Ntp OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.4.14.1 blueNet2NtpService INTEGER "" "" [] map[1:disabled 2:enabled] NTP service status.
+1.3.6.1.4.1.31770.2.2.3.4.14.2 blueNet2NtpPort UNSIGNED32 "" "" [] map[] TCP/IP port of NTP server.
+1.3.6.1.4.1.31770.2.2.3.4.14.3 blueNet2NtpTimeZone INTEGER32 "" "" [] map[] Time Zone, list is sorted once by time offset and once by index 24 : (GMT-12:00) International Date Line West 99 : (GMT-11:00) Coordinated Universal Time-11 39 : (GMT-10:00) Hawaii 2 : (GMT-09:00) Alaska 58 : (GMT-08:00) Pacific Time (US & Canada) 59 : (GMT-08:00) Tijuana, Baja California 75 : (GMT-07:00) Arizona 47 : (GMT-07:00) Mountain Time (US & Canada) 48 : (GMT-07:00) Chihuahua, La Paz, Mazatlan 15 : (GMT-06:00) Central America 21 : (GMT-06:00) Central Time (US & Canada) 22 : (GMT-06:00) Guadalajara, Mexico City, Monterrey 11 : (GMT-06:00) Saskatchewan 106 : (GMT-05:30) Pacific Marquesas 63 : (GMT-05:00) Bogota, Lima, Quito, Rio Branco 29 : (GMT-05:00) Eastern Time (US & Canada) 74 : (GMT-05:00) Indiana (East) 85 : (GMT-04:00) Caracas 95 : (GMT-04:00) Asuncion 6 : (GMT-04:00) Atlantic Time (Canada) 64 : (GMT-04:00) La Paz 17 : (GMT-04:00) Manaus 57 : (GMT-04:00) Santiago 54 : (GMT-03:30) Newfoundland 28 : (GMT-03:00) Brasilia 86 : (GMT-03:00) Buenos Aires 62 : (GMT-03:00) Buenos Aires, Georgetown 36 : (GMT-03:00) Greenland 83 : (GMT-03:00) Montevideo 87 : (GMT-03:00) Salvador 45 : (GMT-02:00) Mid-Atlantic 10 : (GMT-01:00) Azores 12 : (GMT-01:00) Cape Verde Is
+1.3.6.1.4.1.31770.2.2.3.4.14.4 blueNet2MaxNtpServers UNSIGNED32 "" "" [] map[] The maximum number of entries in blueNet2NtpServerTable.
+1.3.6.1.4.1.31770.2.2.3.4.14.5 blueNet2NtpServerTable OTHER "" "" [] map[] A list of NTP server entries.
+1.3.6.1.4.1.31770.2.2.3.4.14.5.1 blueNet2NtpServerEntry OTHER "" "" [blueNet2NtpServerIndex] map[] Entries of NTP server table.
+1.3.6.1.4.1.31770.2.2.3.4.14.5.1.1 blueNet2NtpServerIndex UNSIGNED32 "" "" [blueNet2NtpServerIndex] map[] Index of the NTP server table.
+1.3.6.1.4.1.31770.2.2.3.4.14.5.1.2 blueNet2NtpServerRowStatus INTEGER "RowStatus" "" [blueNet2NtpServerIndex] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] Activate/create/destroy/disable a NTP server entry.
+1.3.6.1.4.1.31770.2.2.3.4.14.5.1.3 blueNet2NtpServerAddress DisplayString "DisplayString" "255a" [blueNet2NtpServerIndex] map[] IP address or name of NTP server.
+1.3.6.1.4.1.31770.2.2.3.4.14.5.1.4 blueNet2NtpServerFriendlyName DisplayString "DisplayString" "255a" [blueNet2NtpServerIndex] map[] User friendly name to identify a ntp server
+1.3.6.1.4.1.31770.2.2.3.4.14.5.1.5 blueNet2NtpServerDescription DisplayString "DisplayString" "255a" [blueNet2NtpServerIndex] map[] Description to identify a ntp server
+1.3.6.1.4.1.31770.2.2.3.4.15 blueNet2Smtp OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.4.15.1 blueNet2SmtpService INTEGER "" "" [] map[1:disabled 2:enabled] SMTP service status.
+1.3.6.1.4.1.31770.2.2.3.4.15.2 blueNet2SmtpPort UNSIGNED32 "" "" [] map[] TCP/IP port of SMTP server.
+1.3.6.1.4.1.31770.2.2.3.4.15.3 blueNet2SmtpServer DisplayString "DisplayString" "255a" [] map[] IP address or name of SMTP server.
+1.3.6.1.4.1.31770.2.2.3.4.15.4 blueNet2SmtpAuth INTEGER "" "" [] map[1:disabled 2:enabled] SMTP authentication mode.
+1.3.6.1.4.1.31770.2.2.3.4.15.5 blueNet2SmtpUsername DisplayString "DisplayString" "255a" [] map[] Username required to authenticate at the SMTP server.
+1.3.6.1.4.1.31770.2.2.3.4.15.6 blueNet2SmtpPassword DisplayString "DisplayString" "255a" [] map[] Password required to authenticate at the SMTP server.
+1.3.6.1.4.1.31770.2.2.3.4.15.7 blueNet2SmtpFrom DisplayString "DisplayString" "255a" [] map[] Sender address of the SMTP message.
+1.3.6.1.4.1.31770.2.2.3.4.15.8 blueNet2SmtpReply DisplayString "DisplayString" "255a" [] map[] Reply address of the SMTP message.
+1.3.6.1.4.1.31770.2.2.3.4.15.9 blueNet2MaxSmtpReceivers UNSIGNED32 "" "" [] map[] The maximum number of entries in blueNet2SmtpReceiverTable.
+1.3.6.1.4.1.31770.2.2.3.4.15.10 blueNet2SmtpReceiverTable OTHER "" "" [] map[] A list of SMTP receiver entries.
+1.3.6.1.4.1.31770.2.2.3.4.15.10.1 blueNet2SmtpReceiverEntry OTHER "" "" [blueNet2SmtpReceiverIndex] map[] Entries of SMTP receiver table.
+1.3.6.1.4.1.31770.2.2.3.4.15.10.1.1 blueNet2SmtpReceiverIndex UNSIGNED32 "" "" [blueNet2SmtpReceiverIndex] map[] Index of the SMTP receiver table.
+1.3.6.1.4.1.31770.2.2.3.4.15.10.1.2 blueNet2SmtpReceiverRowStatus INTEGER "RowStatus" "" [blueNet2SmtpReceiverIndex] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] Activate/create/destroy/disable a SMTP receiver entry.
+1.3.6.1.4.1.31770.2.2.3.4.15.10.1.3 blueNet2SmtpReceiverAddress DisplayString "DisplayString" "255a" [blueNet2SmtpReceiverIndex] map[] IP address or name of SMTP receiver.
+1.3.6.1.4.1.31770.2.2.3.4.15.10.1.4 blueNet2SmtpReceiverFriendlyName DisplayString "DisplayString" "255a" [blueNet2SmtpReceiverIndex] map[] User friendly name to identify a smtp server
+1.3.6.1.4.1.31770.2.2.3.4.15.10.1.5 blueNet2SmtpReceiverDescription DisplayString "DisplayString" "255a" [blueNet2SmtpReceiverIndex] map[] Description to identify a smtp server
+1.3.6.1.4.1.31770.2.2.3.4.16 blueNet2Syslog OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.3.4.16.1 blueNet2SyslogService INTEGER "" "" [] map[1:disabled 2:enabled] Syslog service status.
+1.3.6.1.4.1.31770.2.2.3.4.16.2 blueNet2SyslogFacility INTEGER "" "" [] map[1:local0 2:local1 3:local2 4:local3 5:local4 6:local5 7:local6 8:local7] Syslog facility local0 .
+1.3.6.1.4.1.31770.2.2.3.4.16.3 blueNet2MaxSyslogServers UNSIGNED32 "" "" [] map[] The maximum number of entries in blueNet2SyslogServerTable.
+1.3.6.1.4.1.31770.2.2.3.4.16.4 blueNet2SyslogServerTable OTHER "" "" [] map[] A list of syslog server entries.
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1 blueNet2SyslogServerEntry OTHER "" "" [blueNet2SyslogServerIndex] map[] Entries of syslog server table.
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.1 blueNet2SyslogServerIndex UNSIGNED32 "" "" [blueNet2SyslogServerIndex] map[] Index of the syslog server table.
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.2 blueNet2SyslogServerRowStatus INTEGER "RowStatus" "" [blueNet2SyslogServerIndex] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] Activate/create/destroy/disable a syslog server entry.
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.3 blueNet2SyslogServerAddress DisplayString "DisplayString" "255a" [blueNet2SyslogServerIndex] map[] IP address or name of syslog server.
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.4 blueNet2SyslogServerPort UNSIGNED32 "" "" [blueNet2SyslogServerIndex] map[] TCP/IP port of syslog server.
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.5 blueNet2SyslogServerFriendlyName DisplayString "DisplayString" "255a" [blueNet2SyslogServerIndex] map[] User friendly name to identify a syslog server
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.6 blueNet2SyslogServerDescription DisplayString "DisplayString" "255a" [blueNet2SyslogServerIndex] map[] Description to identify a syslog server
+1.3.6.1.4.1.31770.2.2.3.4.16.4.1.7 blueNet2SyslogServerProtocol INTEGER "" "" [blueNet2SyslogServerIndex] map[1:udp 2:tcp 3:relp] Set TCP/IP protocol of syslog server.
+1.3.6.1.4.1.31770.2.2.4 blueNet2Devices OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.4.1 blueNet2DeviceInfo OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.4.1.1 blueNet2OverallDeviceStatus INTEGER "BlueNet2ComponentStates" "" [] map[1:ok 2:warning 3:alarm] Overall status of all devices.
+1.3.6.1.4.1.31770.2.2.4.1.2 blueNet2NumberOfDevices UNSIGNED32 "" "" [] map[] Number of devices available.
+1.3.6.1.4.1.31770.2.2.4.1.3 blueNet2LastChangeOverallDeviceStatus TIMETICKS "" "" [] map[] Timestamp of last status change of any device connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.4.1.4 blueNet2LastChangeNumberOfDevices TIMETICKS "" "" [] map[] Timestamp of last device number change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.4.1.5 blueNet2LastChangeDeviceSettings TIMETICKS "" "" [] map[] Timestamp of last setting change of any device connected to BlueNet2 PDU according to operating time sysUpTime
+1.3.6.1.4.1.31770.2.2.4.1.6 blueNet2LastChangeDevices TIMETICKS "" "" [] map[] Timestamp of last device change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.4.1.7 blueNet2DevicesAccumulatedStatus PhysAddress48(8) "BlueNet2EntityBits" "1x:" [] map[] A bit field of all current device states.
+1.3.6.1.4.1.31770.2.2.4.2 blueNet2DeviceTable OTHER "" "" [] map[] Headline of device table.
+1.3.6.1.4.1.31770.2.2.4.2.1 blueNet2DeviceEntry OTHER "" "" [blueNet2DeviceIndex] map[] Entries of device table.
+1.3.6.1.4.1.31770.2.2.4.2.1.1 blueNet2DeviceIndex UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.2 blueNet2DeviceGuid OCTETSTR "" "" [blueNet2DeviceIndex] map[] GUID of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.3 blueNet2DeviceName DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Name of the device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.4 blueNet2DeviceFriendlyName DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] User friendlyname of the device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.5 blueNet2DeviceDescription DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Description of the device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.6 blueNet2DeviceType OBJID "" "" [blueNet2DeviceIndex] map[] Type of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.7 blueNet2DeviceStatus INTEGER "BlueNet2EntityStates" "" [blueNet2DeviceIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.8 blueNet2DeviceAlarm DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Alarm text of device connected to BlueNet2 PDU
+1.3.6.1.4.1.31770.2.2.4.2.1.9 blueNet2DeviceLastChange TIMETICKS "" "" [blueNet2DeviceIndex] map[] Timestamp of last change of device connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.4.2.1.10 blueNet2DeviceEntPhysicalIndex UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Corresponding entPhysicalIndex of this device
+1.3.6.1.4.1.31770.2.2.4.2.1.11 blueNet2DevicePartNr DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Article part number of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.12 blueNet2DeviceSNr DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Serial number of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.13 blueNet2DeviceFwV DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Firmware version of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.14 blueNet2DeviceHwV DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Hardware version of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.15 blueNet2DeviceSwV DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Software version of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.16 blueNet2DeviceOsV DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Operating system version of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.17 blueNet2DeviceMAC DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] MAC address of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.18 blueNet2DeviceNumberOfSensors UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of sensors available on this device
+1.3.6.1.4.1.31770.2.2.4.2.1.19 blueNet2DeviceNumberOfCircuits UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of circuits available in this device
+1.3.6.1.4.1.31770.2.2.4.2.1.20 blueNet2DeviceNumberOfPhases UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of phases available in this device
+1.3.6.1.4.1.31770.2.2.4.2.1.21 blueNet2DeviceNumberOfFuses UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of fuses available in this device
+1.3.6.1.4.1.31770.2.2.4.2.1.22 blueNet2DeviceNumberOfSockets UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of sockets available in this device
+1.3.6.1.4.1.31770.2.2.4.2.1.23 blueNet2DeviceNumberOfRCMs UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of RCMs available in this device
+1.3.6.1.4.1.31770.2.2.4.2.1.24 blueNet2DeviceNumberOfVars UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of variables available in this device
+1.3.6.1.4.1.31770.2.2.4.2.1.25 blueNet2DeviceLocation DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Location of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.4.2.1.26 blueNet2DeviceProductDate DisplayString "DisplayString" "255a" [blueNet2DeviceIndex] map[] Device Production Date.
+1.3.6.1.4.1.31770.2.2.4.2.1.27 blueNet2DeviceModbusAddr INTEGER32 "" "" [blueNet2DeviceIndex] map[] Device Modbus Address.
+1.3.6.1.4.1.31770.2.2.4.2.1.28 blueNet2DeviceNumberOfSPDs UNSIGNED32 "" "" [blueNet2DeviceIndex] map[] Number of SPDs available in this device
+1.3.6.1.4.1.31770.2.2.5 blueNet2Sensors OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.5.1 blueNet2SensorInfo OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.5.1.1 blueNet2OverallSensorStatus INTEGER "BlueNet2ComponentStates" "" [] map[1:ok 2:warning 3:alarm] Overall status of all sensors.
+1.3.6.1.4.1.31770.2.2.5.1.2 blueNet2NumberOfSensors UNSIGNED32 "" "" [] map[] Number of sensors available.
+1.3.6.1.4.1.31770.2.2.5.1.3 blueNet2LastChangeOverallSensorStatus TIMETICKS "" "" [] map[] Timestamp of last status change of any sensor connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.5.1.4 blueNet2LastChangeNumberOfSensors TIMETICKS "" "" [] map[] Timestamp of last sensor number change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.5.1.5 blueNet2LastChangeSensorSettings TIMETICKS "" "" [] map[] Timestamp of last setting change of any sensor connected to BlueNet2 PDU according to operating time sysUpTime
+1.3.6.1.4.1.31770.2.2.5.1.6 blueNet2LastChangeSensors TIMETICKS "" "" [] map[] Timestamp of last sensor change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.5.1.7 blueNet2SensorsAccumulatedStatus PhysAddress48(8) "BlueNet2EntityBits" "1x:" [] map[] A bit field of all current sensor states.
+1.3.6.1.4.1.31770.2.2.5.2 blueNet2SensorTable OTHER "" "" [] map[] Headline of sensor table.
+1.3.6.1.4.1.31770.2.2.5.2.1 blueNet2SensorEntry OTHER "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Entries of sensor table.
+1.3.6.1.4.1.31770.2.2.5.2.1.1 blueNet2SensorDevice UNSIGNED32 "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.2 blueNet2SensorIndex UNSIGNED32 "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Index of sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.3 blueNet2SensorGuid OCTETSTR "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] GUID of sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.4 blueNet2SensorName DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] Name of the sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.5 blueNet2SensorFriendlyName DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] User friendlyname of the sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.6 blueNet2SensorDescription DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] Description of the sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.7 blueNet2SensorType OBJID "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Type of of sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.8 blueNet2SensorStatus INTEGER "BlueNet2EntityStates" "" [blueNet2SensorDevice blueNet2SensorIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General Status of sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.9 blueNet2SensorAlarm DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] Alarm text of sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.2.1.10 blueNet2SensorLastChange TIMETICKS "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Timestamp of last change of sensor connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.5.2.1.11 blueNet2SensorEntPhysicalIndex UNSIGNED32 "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Corresponding entPhysicalIndex of this sensor
+1.3.6.1.4.1.31770.2.2.5.2.1.12 blueNet2SensorNumberOfVars UNSIGNED32 "" "" [blueNet2SensorDevice blueNet2SensorIndex] map[] Number of variables available on this sensor
+1.3.6.1.4.1.31770.2.2.5.2.1.13 blueNet2SensorHwV DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] Hardware version of the sensor.
+1.3.6.1.4.1.31770.2.2.5.2.1.14 blueNet2SensorFwV DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] Firmware version of the sensor.
+1.3.6.1.4.1.31770.2.2.5.2.1.15 blueNet2SensorSNr DisplayString "DisplayString" "255a" [blueNet2SensorDevice blueNet2SensorIndex] map[] Serial number of the sensor.
+1.3.6.1.4.1.31770.2.2.5.3 blueNet2SensorVariableTable OTHER "" "" [] map[] Headline of sensor variable table.
+1.3.6.1.4.1.31770.2.2.5.3.1 blueNet2SensorVariableEntry OTHER "" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] Entries of sensor variable table.
+1.3.6.1.4.1.31770.2.2.5.3.1.1 blueNet2SensorDeviceIndex UNSIGNED32 "" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] Index of sensor connected.
+1.3.6.1.4.1.31770.2.2.5.3.1.2 blueNet2SensorSensorIndex UNSIGNED32 "" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] Index of sensor connected.
+1.3.6.1.4.1.31770.2.2.5.3.1.3 blueNet2SensorVariableIndex UNSIGNED32 "" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] Index of sensor variable.
+1.3.6.1.4.1.31770.2.2.5.3.1.4 blueNet2SensorVariableGuid OCTETSTR "" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] GUID of sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.3.1.5 blueNet2SensorVariableName DisplayString "DisplayString" "255a" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] Name of the sensor variable.
+1.3.6.1.4.1.31770.2.2.5.3.1.6 blueNet2SensorVariableFriendlyName DisplayString "DisplayString" "255a" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] User friendlyname of the sensor variable.
+1.3.6.1.4.1.31770.2.2.5.3.1.7 blueNet2SensorVariableDescription DisplayString "DisplayString" "255a" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[] Description of the sensor variable.
+1.3.6.1.4.1.31770.2.2.5.3.1.8 blueNet2SensorVariableGPIOMode INTEGER "BlueNet2GPIOModes" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[0:disabled 2:enabled 6:s0 7:undefined] Mode of the GPIO sensor connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.5.3.1.9 blueNet2SensorVariableGPIOSwitch INTEGER "BlueNet2GPIOSwitch" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[0:undefined 1:on 2:off 3:switchable 5:notSwitchable] Switch on/off the GPIO Outputs.
+1.3.6.1.4.1.31770.2.2.5.3.1.10 blueNet2SensorVariableGPIOState INTEGER "BlueNet2EntityStates" "" [blueNet2SensorDeviceIndex blueNet2SensorSensorIndex blueNet2SensorVariableIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] State of GPIO inputs/outputs
+1.3.6.1.4.1.31770.2.2.6 blueNet2Circuits OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.6.1 blueNet2CircuitInfo OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.6.1.1 blueNet2OverallCircuitStatus INTEGER "BlueNet2ComponentStates" "" [] map[1:ok 2:warning 3:alarm] Overall status of all circuits.
+1.3.6.1.4.1.31770.2.2.6.1.2 blueNet2NumberOfCircuits UNSIGNED32 "" "" [] map[] Number of circuits available.
+1.3.6.1.4.1.31770.2.2.6.1.3 blueNet2LastChangeOverallCircuitStatus TIMETICKS "" "" [] map[] Timestamp of last status change of any circuit connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.6.1.4 blueNet2LastChangeNumberOfCircuits TIMETICKS "" "" [] map[] Timestamp of last circuit number change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.6.1.5 blueNet2LastChangeCircuitSettings TIMETICKS "" "" [] map[] Timestamp of last setting change of any circuit connected to BlueNet2 PDU according to operating time sysUpTime
+1.3.6.1.4.1.31770.2.2.6.1.6 blueNet2LastChangeCircuits TIMETICKS "" "" [] map[] Timestamp of last circuit change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.6.2 blueNet2CircuitTable OTHER "" "" [] map[] Headline of circuit table.
+1.3.6.1.4.1.31770.2.2.6.2.1 blueNet2CircuitEntry OTHER "" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Entries of circuit table.
+1.3.6.1.4.1.31770.2.2.6.2.1.1 blueNet2CircuitDevice UNSIGNED32 "" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.2 blueNet2CircuitIndex UNSIGNED32 "" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Index of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.3 blueNet2CircuitGuid OCTETSTR "" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] GUID of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.4 blueNet2CircuitName DisplayString "DisplayString" "255a" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Name of the circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.5 blueNet2CircuitFriendlyName DisplayString "DisplayString" "255a" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] User friendlyname of the circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.6 blueNet2CircuitDescription DisplayString "DisplayString" "255a" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Description of the circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.7 blueNet2CircuitType OBJID "" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Type of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.2.1.8 blueNet2CircuitStatus INTEGER "BlueNet2EntityStates" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of the entity providing the status of a circuit connected to BlueNet2 PDU in blueNet2VariableStatus.
+1.3.6.1.4.1.31770.2.2.6.2.1.9 blueNet2CircuitNumberOfPhases UNSIGNED32 "" "" [blueNet2CircuitDevice blueNet2CircuitIndex] map[] Number of phases of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3 blueNet2PhaseTable OTHER "" "" [] map[] Headline of phase table.
+1.3.6.1.4.1.31770.2.2.6.3.1 blueNet2PhaseEntry OTHER "" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Entries of phase table.
+1.3.6.1.4.1.31770.2.2.6.3.1.1 blueNet2PhaseDevice UNSIGNED32 "" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.2 blueNet2PhaseCircuit UNSIGNED32 "" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Index of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.3 blueNet2PhaseIndex UNSIGNED32 "" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Index of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.4 blueNet2PhaseGuid OCTETSTR "" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] GUID of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.5 blueNet2PhaseName DisplayString "DisplayString" "255a" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Name of the phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.6 blueNet2PhaseFriendlyName DisplayString "DisplayString" "255a" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] User friendlyname of the phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.7 blueNet2PhaseDescription DisplayString "DisplayString" "255a" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Description of the phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.3.1.8 blueNet2PhaseStatus INTEGER "BlueNet2EntityStates" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of the entity providing the status of a phase connected to BlueNet2 PDU in blueNet2VariableStatus.
+1.3.6.1.4.1.31770.2.2.6.3.1.9 blueNet2PhaseNumberOfFuses UNSIGNED32 "" "" [blueNet2PhaseDevice blueNet2PhaseCircuit blueNet2PhaseIndex] map[] Number of fuses of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4 blueNet2FuseTable OTHER "" "" [] map[] Headline of fuse table.
+1.3.6.1.4.1.31770.2.2.6.4.1 blueNet2FuseEntry OTHER "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Entries of fuse table.
+1.3.6.1.4.1.31770.2.2.6.4.1.1 blueNet2FuseDevice UNSIGNED32 "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.2 blueNet2FuseCircuit UNSIGNED32 "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Index of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.3 blueNet2FusePhase UNSIGNED32 "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Index of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.4 blueNet2FuseIndex UNSIGNED32 "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Index of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.5 blueNet2FuseGuid OCTETSTR "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] GUID of fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.6 blueNet2FuseName DisplayString "DisplayString" "255a" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Name of the fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.7 blueNet2FuseFriendlyName DisplayString "DisplayString" "255a" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] User friendlyname of the fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.8 blueNet2FuseDescription DisplayString "DisplayString" "255a" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Description of the fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.9 blueNet2FuseType OBJID "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Type of the fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.4.1.10 blueNet2FuseStatus INTEGER "BlueNet2EntityStates" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of the entity providing the status of a fuse connected to BlueNet2 PDU in blueNet2VariableStatus.
+1.3.6.1.4.1.31770.2.2.6.4.1.11 blueNet2FuseNumberOfSockets UNSIGNED32 "" "" [blueNet2FuseDevice blueNet2FuseCircuit blueNet2FusePhase blueNet2FuseIndex] map[] Number of sockets of fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5 blueNet2SocketTable OTHER "" "" [] map[] Headline of socket table.
+1.3.6.1.4.1.31770.2.2.6.5.1 blueNet2SocketEntry OTHER "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Entries of socket table.
+1.3.6.1.4.1.31770.2.2.6.5.1.1 blueNet2SocketDevice UNSIGNED32 "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.2 blueNet2SocketCircuit UNSIGNED32 "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Index of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.3 blueNet2SocketPhase UNSIGNED32 "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Index of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.4 blueNet2SocketFuse UNSIGNED32 "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Index of fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.5 blueNet2SocketIndex UNSIGNED32 "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Index of socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.6 blueNet2SocketGuid OCTETSTR "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] GUID of socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.7 blueNet2SocketName DisplayString "DisplayString" "255a" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Name of the socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.8 blueNet2SocketFriendlyName DisplayString "DisplayString" "255a" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] User friendlyname of the socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.9 blueNet2SocketDescription DisplayString "DisplayString" "255a" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Description of the socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.10 blueNet2SocketType OBJID "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Type of the socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.11 blueNet2SocketStatus INTEGER "BlueNet2EntityStates" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of the entity providing the status of a socket connected to BlueNet2 PDU in blueNet2VariableStatus.
+1.3.6.1.4.1.31770.2.2.6.5.1.12 blueNet2SocketMode INTEGER "BlueNet2SocketModes" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[1:switchedOn 2:switchedOff 3:switchedOnAndOff 4:notAvailable 5:notSwitchable] Mode of the socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.13 blueNet2SocketIdentify INTEGER "BlueNet2SocketModes" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[1:switchedOn 2:switchedOff 3:switchedOnAndOff 4:notAvailable 5:notSwitchable] Mode of the sockets LED connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.5.1.14 blueNet2SocketMemberIndex UNSIGNED32 "" "" [blueNet2SocketDevice blueNet2SocketCircuit blueNet2SocketPhase blueNet2SocketIndex] map[] Index of this socket to be used in blueNet2SocketGroupMembers.
+1.3.6.1.4.1.31770.2.2.6.6 blueNet2RcmTable OTHER "" "" [] map[] Headline of rcm table.
+1.3.6.1.4.1.31770.2.2.6.6.1 blueNet2RcmEntry OTHER "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Entries of rcm table.
+1.3.6.1.4.1.31770.2.2.6.6.1.1 blueNet2RcmDevice UNSIGNED32 "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.2 blueNet2RcmCircuit UNSIGNED32 "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Index of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.3 blueNet2RcmPhase UNSIGNED32 "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Index of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.4 blueNet2RcmFuse UNSIGNED32 "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Index of fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.5 blueNet2RcmSocket UNSIGNED32 "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Index of socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.6 blueNet2RcmIndex UNSIGNED32 "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Index of RCM connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.7 blueNet2RcmGuid OCTETSTR "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] GUID of RCM connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.8 blueNet2RcmName DisplayString "DisplayString" "255a" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Name of the RCM connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.9 blueNet2RcmFriendlyName DisplayString "DisplayString" "255a" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] User friendlyname of the RCM connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.10 blueNet2RcmDescription DisplayString "DisplayString" "255a" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Description of the RCM connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.11 blueNet2RcmType OBJID "" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Type of the rcm connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.6.1.12 blueNet2RcmStatus INTEGER "BlueNet2EntityStates" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of the entity providing the status of a Rcm connected to BlueNet2 PDU in blueNet2VariableStatus.
+1.3.6.1.4.1.31770.2.2.6.6.1.13 blueNet2RcmSelftestCommand INTEGER "BlueNet2RcmSelftestCommand" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[0:selftestWithoutAnyNotification 1:selftestWithAlarmNotifyOnly 2:selftestWithSelftestNotifyOnly 3:selftestWithAlarmAndSelftestNotify 4:selftestCommand] RCM self-test commands.
+1.3.6.1.4.1.31770.2.2.6.6.1.14 blueNet2RcmSelftestResultValue INTEGER "BlueNet2RcmSelftestResult" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[0:notRun 1:notReachable 2:success 3:failure 4:partialSuccess 5:cancelled 255:notApplicable] RCM self-test result value.
+1.3.6.1.4.1.31770.2.2.6.6.1.15 blueNet2RcmSelftestResultACvalue INTEGER "BlueNet2RcmSelftestResult" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[0:notRun 1:notReachable 2:success 3:failure 4:partialSuccess 5:cancelled 255:notApplicable] RCM self-test AC result value.
+1.3.6.1.4.1.31770.2.2.6.6.1.16 blueNet2RcmSelftestResultDCvalue INTEGER "BlueNet2RcmSelftestResult" "" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[0:notRun 1:notReachable 2:success 3:failure 4:partialSuccess 5:cancelled 255:notApplicable] RCM self-test DC result value.
+1.3.6.1.4.1.31770.2.2.6.6.1.17 blueNet2RcmSelftestTimeStamp DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] Timestamp of RCM self-test.
+1.3.6.1.4.1.31770.2.2.6.6.1.18 blueNet2RcmSelftestResultStr DisplayString "DisplayString" "255a" [blueNet2RcmDevice blueNet2RcmCircuit blueNet2RcmPhase blueNet2RcmFuse blueNet2RcmSocket blueNet2RcmIndex] map[] RCM Selftest result as string.
+1.3.6.1.4.1.31770.2.2.6.7 blueNet2SpdTable OTHER "" "" [] map[] Headline of SPD table.
+1.3.6.1.4.1.31770.2.2.6.7.1 blueNet2SpdEntry OTHER "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Entries of spd table.
+1.3.6.1.4.1.31770.2.2.6.7.1.1 blueNet2SpdDevice UNSIGNED32 "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Index of device connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.2 blueNet2SpdCircuit UNSIGNED32 "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Index of circuit connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.3 blueNet2SpdPhase UNSIGNED32 "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Index of phase connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.4 blueNet2SpdFuse UNSIGNED32 "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Index of fuse connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.5 blueNet2SpdSocket UNSIGNED32 "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Index of socket connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.6 blueNet2SpdIndex UNSIGNED32 "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Index of SPD connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.7 blueNet2SpdGuid OCTETSTR "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] GUID of SPD connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.8 blueNet2SpdName DisplayString "DisplayString" "255a" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Name of the SPD connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.9 blueNet2SpdFriendlyName DisplayString "DisplayString" "255a" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] User friendlyname of the SPD connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.10 blueNet2SpdDescription DisplayString "DisplayString" "255a" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Description of the SPD connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.11 blueNet2SpdType OBJID "" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[] Type of the spd connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.6.7.1.12 blueNet2SpdStatus INTEGER "BlueNet2EntityStates" "" [blueNet2SpdDevice blueNet2SpdCircuit blueNet2SpdPhase blueNet2SpdFuse blueNet2SpdSocket blueNet2SpdIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of the entity providing the status of an SPD connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7 blueNet2SocketGroups OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.7.1 blueNet2SocketGroupInfo OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.7.1.1 blueNet2OverallSocketGroupStatus INTEGER "BlueNet2ComponentStates" "" [] map[1:ok 2:warning 3:alarm] Overall status of all socket groups.
+1.3.6.1.4.1.31770.2.2.7.1.2 blueNet2NumberOfSocketGroups UNSIGNED32 "" "" [] map[] Number of socket groups available.
+1.3.6.1.4.1.31770.2.2.7.1.3 blueNet2LastChangeOverallSocketGroupStatus TIMETICKS "" "" [] map[] Timestamp of last status change of any socket group connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.7.1.4 blueNet2LastChangeNumberOfSocketGroups TIMETICKS "" "" [] map[] Timestamp of last socket group number change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.7.1.5 blueNet2LastChangeSocketGroupSettings TIMETICKS "" "" [] map[] Timestamp of last setting change of any socket group connected to BlueNet2 PDU according to operating time sysUpTime
+1.3.6.1.4.1.31770.2.2.7.1.6 blueNet2LastChangeSocketGroups TIMETICKS "" "" [] map[] Timestamp of last socket group change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.7.1.7 blueNet2SocketGroupsAccumulatedStatus PhysAddress48(8) "BlueNet2EntityBits" "1x:" [] map[] A bit field of all current socket group states.
+1.3.6.1.4.1.31770.2.2.7.1.8 blueNet2SocketGroupsInUse UNSIGNED32 "" "" [] map[] Number of socket groups in use.
+1.3.6.1.4.1.31770.2.2.7.1.9 blueNet2MaxSocketGroups UNSIGNED32 "" "" [] map[] The maximum number of entries in blueNet2SocketGroupTable.
+1.3.6.1.4.1.31770.2.2.7.2 blueNet2SocketGroupTable OTHER "" "" [] map[] Headline of socket group table.
+1.3.6.1.4.1.31770.2.2.7.2.1 blueNet2SocketGroupEntry OTHER "" "" [blueNet2SocketGroupIndex] map[] Entries of socket group table.
+1.3.6.1.4.1.31770.2.2.7.2.1.1 blueNet2SocketGroupIndex UNSIGNED32 "" "" [blueNet2SocketGroupIndex] map[] Index of socket group available on BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.2 blueNet2SocketGroupRowStatus INTEGER "RowStatus" "" [blueNet2SocketGroupIndex] map[1:active 2:notInService 3:notReady 4:createAndGo 5:createAndWait 6:destroy] Activate/create/destroy/disable a socket group entry.
+1.3.6.1.4.1.31770.2.2.7.2.1.3 blueNet2SocketGroupGuid OCTETSTR "" "" [blueNet2SocketGroupIndex] map[] GUID of socket group on BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.4 blueNet2SocketGroupName DisplayString "DisplayString" "255a" [blueNet2SocketGroupIndex] map[] Name of the socket group connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.5 blueNet2SocketGroupFriendlyName DisplayString "DisplayString" "255a" [blueNet2SocketGroupIndex] map[] User friendlyname of the socket group connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.6 blueNet2SocketGroupDescription DisplayString "DisplayString" "255a" [blueNet2SocketGroupIndex] map[] Description of the socket group connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.7 blueNet2SocketGroupStatus INTEGER "BlueNet2EntityStates" "" [blueNet2SocketGroupIndex] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of socket group.
+1.3.6.1.4.1.31770.2.2.7.2.1.8 blueNet2SocketGroupMode INTEGER "BlueNet2SocketModes" "" [blueNet2SocketGroupIndex] map[1:switchedOn 2:switchedOff 3:switchedOnAndOff 4:notAvailable 5:notSwitchable] Mode of all the sockets of a socket group connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.9 blueNet2SocketGroupIdentify INTEGER "BlueNet2SocketModes" "" [blueNet2SocketGroupIndex] map[1:switchedOn 2:switchedOff 3:switchedOnAndOff 4:notAvailable 5:notSwitchable] Mode of all the socket leds of a socket group connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.7.2.1.10 blueNet2SocketGroupEntPhysicalIndex UNSIGNED32 "" "" [blueNet2SocketGroupIndex] map[] Corresponding entPhysicalIndex of this socketgroup
+1.3.6.1.4.1.31770.2.2.7.2.1.11 blueNet2SocketGroupAccumulatedStatus PhysAddress48(8) "BlueNet2EntityBits" "1x:" [blueNet2SocketGroupIndex] map[] A bit field of all current socket group members states.
+1.3.6.1.4.1.31770.2.2.7.2.1.12 blueNet2SocketGroupMembers PhysAddress48 "BlueNet2SocketMembers" "1x:" [blueNet2SocketGroupIndex] map[] The set of sockets which are members of this socket group.
+1.3.6.1.4.1.31770.2.2.8 blueNet2Variables OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.8.1 blueNet2VariableInfo OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.8.1.1 blueNet2OverallVariableStatus INTEGER "BlueNet2ComponentStates" "" [] map[1:ok 2:warning 3:alarm] Overall status of all variables.
+1.3.6.1.4.1.31770.2.2.8.1.2 blueNet2NumberOfVariables UNSIGNED32 "" "" [] map[] Number of variables available.
+1.3.6.1.4.1.31770.2.2.8.1.3 blueNet2LastChangeOverallVariableStatus TIMETICKS "" "" [] map[] Timestamp of last status change of any variables connected to BlueNet2 PDU according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.8.1.4 blueNet2LastChangeNumberOfVariables TIMETICKS "" "" [] map[] Timestamp of last variables number change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.8.1.5 blueNet2LastChangeVariableSettings TIMETICKS "" "" [] map[] Timestamp of last setting change of any variables connected to BlueNet2 PDU according to operating time sysUpTime
+1.3.6.1.4.1.31770.2.2.8.1.6 blueNet2LastChangeVariableStatus TIMETICKS "" "" [] map[] Timestamp of last variable status change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.8.1.7 blueNet2VariablesAccumulatedStatus PhysAddress48(8) "BlueNet2EntityBits" "1x:" [] map[] A bit field of all current variable states.
+1.3.6.1.4.1.31770.2.2.8.1.8 blueNet2NumberOfChangesVariableScaling UNSIGNED32 "" "" [] map[] Number of changes in variable scaling due to overrun or reset
+1.3.6.1.4.1.31770.2.2.8.1.9 blueNet2LastChangeVariableScaling TIMETICKS "" "" [] map[] Timestamp of last variable scaling change according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.8.1.10 blueNet2LastChangeVariableReset TIMETICKS "" "" [] map[] Timestamp of last manually reset of a variable according to operating time sysUpTime.
+1.3.6.1.4.1.31770.2.2.8.2 blueNet2VariableTable OTHER "" "" [] map[] Headline of variable table.
+1.3.6.1.4.1.31770.2.2.8.2.1 blueNet2VariableEntry OTHER "" "" [blueNet2VariableId] map[] Entries of variable table.
+1.3.6.1.4.1.31770.2.2.8.2.1.1 blueNet2VariableId OCTETSTR "" "" [blueNet2VariableId] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.2.1.2 blueNet2VariableGuid OCTETSTR "" "" [blueNet2VariableId] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.2.1.3 blueNet2VariableName DisplayString "DisplayString" "255a" [blueNet2VariableId] map[] Name of the variable connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.8.2.1.4 blueNet2VariableFriendlyName DisplayString "DisplayString" "255a" [blueNet2VariableId] map[] User friendlyname of the variable connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.8.2.1.5 blueNet2VariableDescription DisplayString "DisplayString" "255a" [blueNet2VariableId] map[] Description of the variable connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.8.2.1.6 blueNet2VariableType INTEGER "BlueNet2DataSourceTypes" "" [blueNet2VariableId] map[1:voltage 2:peakVoltage 5:peakCurrent 7:differentialCurrentAc 8:differentialCurrentDc 9:neutralCurrent 16:phaseAngle 17:powerFactor 18:apparentPower 19:activePower 20:peakActivePower 21:peakActivePowerUser 22:reactivePower 23:frequency 24:peakNeutralCurrent 32:apparentEnergyAccumulated 33:apparentEnergyDelta 34:reactiveEnergyAccumulated 35:reactiveEnergyDelta 36:activeEnergyAccumulated 37:activeEnergyDelta 38:activeEnergyAccumulatedUser 39:activeEnergyRuntime 40:customEnergyRuntimeUser 48:fuseState 49:orientation 50:usb 51:socketState 52:pduState 53:sensorState 54:circuitState 55:phaseState 56:rcdState 57:socketGroupState 58:globalState 64:sensorType 65:circuitType 66:fuseType 67:socketType 68:socketColor 69:phaseType 70:pduType 71:rcmType 80:deltaVoltage12 81:deltaVoltage23 82:deltaVoltage31 83:rcmACPeak 84:rcmDCPeak 256:temperature 257:humidity 258:ioInputChannel1 259:ioInputChannel2 260:ioInputChannel3 261:ioInputChannel4 262:ioOutputChannel1 263:ioOutputChannel2 264:ioOutputChannel3 265:ioOutputChannel4 266:dewPoint 267:pressure 268:diffPressure 269:co2Equivalent 270:tvoc 65535:unspecified] Type of variable.
+1.3.6.1.4.1.31770.2.2.8.2.1.7 blueNet2VariableStatus INTEGER "BlueNet2EntityStates" "" [blueNet2VariableId] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] General status of variable connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.8.2.1.8 blueNet2VariableAlarm DisplayString "DisplayString" "255a" [blueNet2VariableId] map[] Alarm text of variable connected to BlueNet2 PDU.
+1.3.6.1.4.1.31770.2.2.8.2.1.9 blueNet2VariableScaling INTEGER32 "" "" [blueNet2VariableId] map[] Scaling of variable as 10^x.
+1.3.6.1.4.1.31770.2.2.8.2.1.10 blueNet2VariableUnit INTEGER "BlueNet2DataSourceUnits" "" [blueNet2VariableId] map[1:metre 2:kilogram 3:second 4:ampere 5:kelvin 6:mole 7:candela 16:radian 17:steradian 32:hertz 33:newton 34:pascal 35:joule 36:watt 37:coulomb 38:volt 39:farad 40:ohm 41:siemens 42:weber 43:tesla 44:henry 45:celsius 46:lumen 47:lux 48:becquerel 49:gray 50:sievert 51:katal 64:grade 65:degree 66:aMinuteAngle 67:aSecondAngle 68:litre 69:are 70:hectare 71:minute 72:hour 73:day 74:year 75:gram 76:tonne 78:bar 79:poise 80:stokes 81:electronvolt 82:atomicMass 83:astronomic 84:parsec 85:metrePerS2 86:newtonMetre 87:s2 88:m2 89:m3 90:pascalSecond 91:jPerKgK 92:wPerMK 93:jPerMoleK 94:wPerM2Sr 95:katPerM3 240:kiloWattHour 241:percentage 242:va 243:var 244:kiloVaHour 245:kiloVarHour 246:milliAmpere 255:unit] Unit of variable.
+1.3.6.1.4.1.31770.2.2.8.2.1.11 blueNet2VariableSetPoint INTEGER "" "" [blueNet2VariableId] map[1:notAvailable 2:available] Set point supported for this variable.
+1.3.6.1.4.1.31770.2.2.8.2.1.12 blueNet2VariableMode INTEGER "" "" [blueNet2VariableId] map[0:resettable 1:reset 2:noReset] Reset mode of a variable
+1.3.6.1.4.1.31770.2.2.8.2.1.13 blueNet2VariableEntPhysicalIndex UNSIGNED32 "" "" [blueNet2VariableId] map[] Corresponding entPhysicalIndex of this variable
+1.3.6.1.4.1.31770.2.2.8.3 blueNet2VariableSetPointTable OTHER "" "" [] map[] Headline of variable set point table.
+1.3.6.1.4.1.31770.2.2.8.3.1 blueNet2VariableSetPointEntry OTHER "" "" [blueNet2VariableSetPointGuid] map[] Entries of variable set point table.
+1.3.6.1.4.1.31770.2.2.8.3.1.1 blueNet2VariableSetPointGuid OCTETSTR "" "" [blueNet2VariableSetPointGuid] map[] GUID of set point.
+1.3.6.1.4.1.31770.2.2.8.3.1.2 blueNet2VariableSetPointType BITSTRING "" "" [blueNet2VariableSetPointGuid] map[0:highAlarm 1:lowAlarm 2:highWarning 3:lowWarning] Type of setpoint.
+1.3.6.1.4.1.31770.2.2.8.3.1.3 blueNet2VariableSetPointMinValue INTEGER32 "" "" [blueNet2VariableSetPointGuid] map[] Minimum value of setpoint.
+1.3.6.1.4.1.31770.2.2.8.3.1.4 blueNet2VariableSetPointMaxValue INTEGER32 "" "" [blueNet2VariableSetPointGuid] map[] Maximum value of setpoint.
+1.3.6.1.4.1.31770.2.2.8.3.1.5 blueNet2VariableSetPointLowerAlarm INTEGER32 "" "" [blueNet2VariableSetPointGuid] map[] Lower threshold of variable.
+1.3.6.1.4.1.31770.2.2.8.3.1.6 blueNet2VariableSetPointLowerWarning INTEGER32 "" "" [blueNet2VariableSetPointGuid] map[] Lower Warning of variable.
+1.3.6.1.4.1.31770.2.2.8.3.1.7 blueNet2VariableSetPointUpperWarning INTEGER32 "" "" [blueNet2VariableSetPointGuid] map[] Upper warning of variable.
+1.3.6.1.4.1.31770.2.2.8.3.1.8 blueNet2VariableSetPointUpperAlarm INTEGER32 "" "" [blueNet2VariableSetPointGuid] map[] Upper threshold of variable.
+1.3.6.1.4.1.31770.2.2.8.3.1.9 blueNet2VariableSetPointHysteresis UNSIGNED32 "" "" [blueNet2VariableSetPointGuid] map[] Hysteresis of variable.
+1.3.6.1.4.1.31770.2.2.8.3.1.10 blueNet2VariableSetPointRcmACUpperAlarmThreshold DisplayString "DisplayString" "255a" [blueNet2VariableSetPointGuid] map[] Upper Alarm threshold of RCM AC.
+1.3.6.1.4.1.31770.2.2.8.3.1.11 blueNet2VariableSetPointRcmACUpperAlarmGradient DisplayString "DisplayString" "255a" [blueNet2VariableSetPointGuid] map[] Upper Alarm gradient of RCM AC.
+1.3.6.1.4.1.31770.2.2.8.3.1.12 blueNet2VariableSetPointRcmACUpperWarningThreshold DisplayString "DisplayString" "255a" [blueNet2VariableSetPointGuid] map[] Upper Warning threshold of RCM AC.
+1.3.6.1.4.1.31770.2.2.8.3.1.13 blueNet2VariableSetPointRcmACUpperWarningGradient DisplayString "DisplayString" "255a" [blueNet2VariableSetPointGuid] map[] Upper Warning gradient of RCM AC.
+1.3.6.1.4.1.31770.2.2.8.4 blueNet2VariableDataTable OTHER "" "" [] map[] Headline of variable data table
+1.3.6.1.4.1.31770.2.2.8.4.1 blueNet2VariableDataEntry OTHER "" "" [blueNet2VariableGuid] map[] Entries of variable date table.
+1.3.6.1.4.1.31770.2.2.8.4.1.1 blueNet2VariableDataId OCTETSTR "" "" [blueNet2VariableGuid] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.4.1.2 blueNet2VariableDataGuid OCTETSTR "" "" [blueNet2VariableGuid] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.4.1.3 blueNet2VariableDataType INTEGER "BlueNet2DataSourceTypes" "" [blueNet2VariableGuid] map[1:voltage 2:peakVoltage 5:peakCurrent 7:differentialCurrentAc 8:differentialCurrentDc 9:neutralCurrent 16:phaseAngle 17:powerFactor 18:apparentPower 19:activePower 20:peakActivePower 21:peakActivePowerUser 22:reactivePower 23:frequency 24:peakNeutralCurrent 32:apparentEnergyAccumulated 33:apparentEnergyDelta 34:reactiveEnergyAccumulated 35:reactiveEnergyDelta 36:activeEnergyAccumulated 37:activeEnergyDelta 38:activeEnergyAccumulatedUser 39:activeEnergyRuntime 40:customEnergyRuntimeUser 48:fuseState 49:orientation 50:usb 51:socketState 52:pduState 53:sensorState 54:circuitState 55:phaseState 56:rcdState 57:socketGroupState 58:globalState 64:sensorType 65:circuitType 66:fuseType 67:socketType 68:socketColor 69:phaseType 70:pduType 71:rcmType 80:deltaVoltage12 81:deltaVoltage23 82:deltaVoltage31 83:rcmACPeak 84:rcmDCPeak 256:temperature 257:humidity 258:ioInputChannel1 259:ioInputChannel2 260:ioInputChannel3 261:ioInputChannel4 262:ioOutputChannel1 263:ioOutputChannel2 264:ioOutputChannel3 265:ioOutputChannel4 266:dewPoint 267:pressure 268:diffPressure 269:co2Equivalent 270:tvoc 65535:unspecified] Type of variable.
+1.3.6.1.4.1.31770.2.2.8.4.1.4 blueNet2VariableDataStatus INTEGER "BlueNet2EntityStates" "" [blueNet2VariableGuid] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of variable.
+1.3.6.1.4.1.31770.2.2.8.4.1.5 blueNet2VariableDataValue INTEGER32 "" "" [blueNet2VariableGuid] map[] Value of variable.
+1.3.6.1.4.1.31770.2.2.8.4.1.6 blueNet2VariableDataDateTime DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [blueNet2VariableGuid] map[] Timestamp of variable.
+1.3.6.1.4.1.31770.2.2.8.5 blueNet2VariableDataByTypeTable OTHER "" "" [] map[] Headline of variable data by type table
+1.3.6.1.4.1.31770.2.2.8.5.1 blueNet2VariableDataByTypeEntry OTHER "" "" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[] Entries of variable data by type table.
+1.3.6.1.4.1.31770.2.2.8.5.1.1 blueNet2VariableDataByType INTEGER "BlueNet2DataSourceTypes" "" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[1:voltage 2:peakVoltage 5:peakCurrent 7:differentialCurrentAc 8:differentialCurrentDc 9:neutralCurrent 16:phaseAngle 17:powerFactor 18:apparentPower 19:activePower 20:peakActivePower 21:peakActivePowerUser 22:reactivePower 23:frequency 24:peakNeutralCurrent 32:apparentEnergyAccumulated 33:apparentEnergyDelta 34:reactiveEnergyAccumulated 35:reactiveEnergyDelta 36:activeEnergyAccumulated 37:activeEnergyDelta 38:activeEnergyAccumulatedUser 39:activeEnergyRuntime 40:customEnergyRuntimeUser 48:fuseState 49:orientation 50:usb 51:socketState 52:pduState 53:sensorState 54:circuitState 55:phaseState 56:rcdState 57:socketGroupState 58:globalState 64:sensorType 65:circuitType 66:fuseType 67:socketType 68:socketColor 69:phaseType 70:pduType 71:rcmType 80:deltaVoltage12 81:deltaVoltage23 82:deltaVoltage31 83:rcmACPeak 84:rcmDCPeak 256:temperature 257:humidity 258:ioInputChannel1 259:ioInputChannel2 260:ioInputChannel3 261:ioInputChannel4 262:ioOutputChannel1 263:ioOutputChannel2 264:ioOutputChannel3 265:ioOutputChannel4 266:dewPoint 267:pressure 268:diffPressure 269:co2Equivalent 270:tvoc 65535:unspecified] Type of variable.
+1.3.6.1.4.1.31770.2.2.8.5.1.2 blueNet2VariableDataByTypeGuid OCTETSTR "" "" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.5.1.3 blueNet2VariableDataByTypeType INTEGER "BlueNet2DataSourceTypes" "" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[1:voltage 2:peakVoltage 5:peakCurrent 7:differentialCurrentAc 8:differentialCurrentDc 9:neutralCurrent 16:phaseAngle 17:powerFactor 18:apparentPower 19:activePower 20:peakActivePower 21:peakActivePowerUser 22:reactivePower 23:frequency 24:peakNeutralCurrent 32:apparentEnergyAccumulated 33:apparentEnergyDelta 34:reactiveEnergyAccumulated 35:reactiveEnergyDelta 36:activeEnergyAccumulated 37:activeEnergyDelta 38:activeEnergyAccumulatedUser 39:activeEnergyRuntime 40:customEnergyRuntimeUser 48:fuseState 49:orientation 50:usb 51:socketState 52:pduState 53:sensorState 54:circuitState 55:phaseState 56:rcdState 57:socketGroupState 58:globalState 64:sensorType 65:circuitType 66:fuseType 67:socketType 68:socketColor 69:phaseType 70:pduType 71:rcmType 80:deltaVoltage12 81:deltaVoltage23 82:deltaVoltage31 83:rcmACPeak 84:rcmDCPeak 256:temperature 257:humidity 258:ioInputChannel1 259:ioInputChannel2 260:ioInputChannel3 261:ioInputChannel4 262:ioOutputChannel1 263:ioOutputChannel2 264:ioOutputChannel3 265:ioOutputChannel4 266:dewPoint 267:pressure 268:diffPressure 269:co2Equivalent 270:tvoc 65535:unspecified] Type of variable.
+1.3.6.1.4.1.31770.2.2.8.5.1.4 blueNet2VariableDataByTypeStatus INTEGER "BlueNet2EntityStates" "" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of variable.
+1.3.6.1.4.1.31770.2.2.8.5.1.5 blueNet2VariableDataByTypeValue INTEGER32 "" "" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[] Value of variable.
+1.3.6.1.4.1.31770.2.2.8.5.1.6 blueNet2VariableDataByTypeDateTime DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [blueNet2VariableDataByType blueNet2VariableDataByTypeGuid] map[] Timestamp of variable.
+1.3.6.1.4.1.31770.2.2.8.6 blueNet2VariableDataByStateTable OTHER "" "" [] map[] Headline of variable data by state table
+1.3.6.1.4.1.31770.2.2.8.6.1 blueNet2VariableDataByStateEntry OTHER "" "" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[] Entries of variable data by state table.
+1.3.6.1.4.1.31770.2.2.8.6.1.1 blueNet2VariableDataByState INTEGER "BlueNet2EntityStates" "" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of variable.
+1.3.6.1.4.1.31770.2.2.8.6.1.2 blueNet2VariableDataByStateGuid OCTETSTR "" "" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.6.1.3 blueNet2VariableDataByStateType INTEGER "BlueNet2DataSourceTypes" "" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[1:voltage 2:peakVoltage 5:peakCurrent 7:differentialCurrentAc 8:differentialCurrentDc 9:neutralCurrent 16:phaseAngle 17:powerFactor 18:apparentPower 19:activePower 20:peakActivePower 21:peakActivePowerUser 22:reactivePower 23:frequency 24:peakNeutralCurrent 32:apparentEnergyAccumulated 33:apparentEnergyDelta 34:reactiveEnergyAccumulated 35:reactiveEnergyDelta 36:activeEnergyAccumulated 37:activeEnergyDelta 38:activeEnergyAccumulatedUser 39:activeEnergyRuntime 40:customEnergyRuntimeUser 48:fuseState 49:orientation 50:usb 51:socketState 52:pduState 53:sensorState 54:circuitState 55:phaseState 56:rcdState 57:socketGroupState 58:globalState 64:sensorType 65:circuitType 66:fuseType 67:socketType 68:socketColor 69:phaseType 70:pduType 71:rcmType 80:deltaVoltage12 81:deltaVoltage23 82:deltaVoltage31 83:rcmACPeak 84:rcmDCPeak 256:temperature 257:humidity 258:ioInputChannel1 259:ioInputChannel2 260:ioInputChannel3 261:ioInputChannel4 262:ioOutputChannel1 263:ioOutputChannel2 264:ioOutputChannel3 265:ioOutputChannel4 266:dewPoint 267:pressure 268:diffPressure 269:co2Equivalent 270:tvoc 65535:unspecified] Type of variable.
+1.3.6.1.4.1.31770.2.2.8.6.1.4 blueNet2VariableDataByStateStatus INTEGER "BlueNet2EntityStates" "" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of variable.
+1.3.6.1.4.1.31770.2.2.8.6.1.5 blueNet2VariableDataByStateValue INTEGER32 "" "" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[] Value of variable.
+1.3.6.1.4.1.31770.2.2.8.6.1.6 blueNet2VariableDataByStateDateTime DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [blueNet2VariableDataByState blueNet2VariableDataByStateGuid] map[] Timestamp of variable.
+1.3.6.1.4.1.31770.2.2.8.7 blueNet2VariableDataBySourceTable OTHER "" "" [] map[] Headline of variable data by state table
+1.3.6.1.4.1.31770.2.2.8.7.1 blueNet2VariableDataBySourceEntry OTHER "" "" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[] Entries of variable data by source table.
+1.3.6.1.4.1.31770.2.2.8.7.1.1 blueNet2VariableDataBySource INTEGER "BlueNet2EntitySources" "" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[1:other 2:device 3:sensor 4:circuit 5:phase 6:fuse 7:socket 8:socketgroup 9:rcm] Source of variable.
+1.3.6.1.4.1.31770.2.2.8.7.1.2 blueNet2VariableDataBySourceGuid OCTETSTR "" "" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[] GUID of variable.
+1.3.6.1.4.1.31770.2.2.8.7.1.3 blueNet2VariableDataBySourceType INTEGER "BlueNet2DataSourceTypes" "" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[1:voltage 2:peakVoltage 5:peakCurrent 7:differentialCurrentAc 8:differentialCurrentDc 9:neutralCurrent 16:phaseAngle 17:powerFactor 18:apparentPower 19:activePower 20:peakActivePower 21:peakActivePowerUser 22:reactivePower 23:frequency 24:peakNeutralCurrent 32:apparentEnergyAccumulated 33:apparentEnergyDelta 34:reactiveEnergyAccumulated 35:reactiveEnergyDelta 36:activeEnergyAccumulated 37:activeEnergyDelta 38:activeEnergyAccumulatedUser 39:activeEnergyRuntime 40:customEnergyRuntimeUser 48:fuseState 49:orientation 50:usb 51:socketState 52:pduState 53:sensorState 54:circuitState 55:phaseState 56:rcdState 57:socketGroupState 58:globalState 64:sensorType 65:circuitType 66:fuseType 67:socketType 68:socketColor 69:phaseType 70:pduType 71:rcmType 80:deltaVoltage12 81:deltaVoltage23 82:deltaVoltage31 83:rcmACPeak 84:rcmDCPeak 256:temperature 257:humidity 258:ioInputChannel1 259:ioInputChannel2 260:ioInputChannel3 261:ioInputChannel4 262:ioOutputChannel1 263:ioOutputChannel2 264:ioOutputChannel3 265:ioOutputChannel4 266:dewPoint 267:pressure 268:diffPressure 269:co2Equivalent 270:tvoc 65535:unspecified] Type of variable.
+1.3.6.1.4.1.31770.2.2.8.7.1.4 blueNet2VariableDataBySourceStatus INTEGER "BlueNet2EntityStates" "" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of variable.
+1.3.6.1.4.1.31770.2.2.8.7.1.5 blueNet2VariableDataBySourceValue INTEGER32 "" "" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[] Value of variable.
+1.3.6.1.4.1.31770.2.2.8.7.1.6 blueNet2VariableDataBySourceDateTime DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [blueNet2VariableDataBySource blueNet2VariableDataBySourceGuid] map[] Timestamp of variable.
+1.3.6.1.4.1.31770.2.2.9 blueNet2MPStates OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.2.9.1 blueNet2MPTable OTHER "" "" [] map[] Headline of MP (Measurement Point) table.
+1.3.6.1.4.1.31770.2.2.9.1.1 blueNet2MPEntry OTHER "" "" [blueNet2MPID] map[] Entries of Measurement Point table.
+1.3.6.1.4.1.31770.2.2.9.1.1.1 blueNet2MPID OCTETSTR "" "" [blueNet2MPID] map[] GUID of a Measurement Point.
+1.3.6.1.4.1.31770.2.2.9.1.1.2 blueNet2MPGuid OCTETSTR "" "" [blueNet2MPID] map[] GUID of a Measurement Point.
+1.3.6.1.4.1.31770.2.2.9.1.1.3 blueNet2MPName DisplayString "DisplayString" "255a" [blueNet2MPID] map[] Name of a Measurement Point.
+1.3.6.1.4.1.31770.2.2.9.1.1.4 blueNet2MPFriendlyName DisplayString "DisplayString" "255a" [blueNet2MPID] map[] User friendlyname of a Measurement Point.
+1.3.6.1.4.1.31770.2.2.9.1.1.5 blueNet2MPState INTEGER "BlueNet2EntityStates" "" [blueNet2MPID] map[0:expected 1:undefined 2:ok 3:errorHigh 4:errorLow 5:warningHigh 6:warningLow 7:lost 8:deactivate 9:onAlarmIdentidy 10:offAlarmIdentify 11:onAlarm 12:offAlarm 13:onWarningIdentify 14:offWarningIdentify 15:onWarning 16:offWarning 17:onIdentify 18:offIdentify 19:on 20:off 21:onChildAlarm 22:offChildAlarm 23:onChildWarning 24:offChildWarning 25:childAlarm 26:childWarning 27:lostChild 36:updateInProgress 37:updateError 38:onGoingSwitch 39:high 40:low 41:alarm 42:warning 43:ok 44:disabled 45:fwVersionTooNew] Status of a Measurement Point.
+1.3.6.1.4.1.31770.2.2.9.1.1.6 blueNet2MPTimeStamp DateAndTime "DateAndTime" "2d-1d-1d,1d:1d:1d.1d,1a1d:1d" [blueNet2MPID] map[] Timestamp of the last change of a Measurement Point.
+1.3.6.1.4.1.31770.2.3 blueNet2Traps OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.3.0 blueNet2TrapPrefix OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.3.0.1 blueNet2PduStatusOkTrap NOTIFTYPE "" "" [] map[] PDU status ok.
+1.3.6.1.4.1.31770.2.3.0.2 blueNet2PduStatusWarningTrap NOTIFTYPE "" "" [] map[] PDU status warning.
+1.3.6.1.4.1.31770.2.3.0.3 blueNet2PduStatusAlarmTrap NOTIFTYPE "" "" [] map[] PDU status alarm.
+1.3.6.1.4.1.31770.2.3.0.4 blueNet2SensorStatusOkTrap NOTIFTYPE "" "" [] map[] Sensor status change.
+1.3.6.1.4.1.31770.2.3.0.5 blueNet2SensorStatusWarningTrap NOTIFTYPE "" "" [] map[] Sensor status change.
+1.3.6.1.4.1.31770.2.3.0.6 blueNet2SensorStatusAlarmTrap NOTIFTYPE "" "" [] map[] Sensor status change.
+1.3.6.1.4.1.31770.2.3.0.7 blueNet2VariableStatusOkTrap NOTIFTYPE "" "" [] map[] Variable status is ok.
+1.3.6.1.4.1.31770.2.3.0.8 blueNet2VariableLowerWarningTrap NOTIFTYPE "" "" [] map[] Variable status lower warning.
+1.3.6.1.4.1.31770.2.3.0.9 blueNet2VariableUpperWarningTrap NOTIFTYPE "" "" [] map[] Variable status upper warning.
+1.3.6.1.4.1.31770.2.3.0.10 blueNet2VariableLowerAlarmTrap NOTIFTYPE "" "" [] map[] Variable status lower alarm.
+1.3.6.1.4.1.31770.2.3.0.11 blueNet2VariableUpperAlarmTrap NOTIFTYPE "" "" [] map[] Variable status upper alarm.
+1.3.6.1.4.1.31770.2.3.0.12 blueNet2RCMSelftestResultTrap NOTIFTYPE "" "" [] map[] RCM Selftest result.
+1.3.6.1.4.1.31770.2.3.0.98 blueNet2ReconfigAgentTrap NOTIFTYPE "" "" [] map[] Agent reconfiguration.
+1.3.6.1.4.1.31770.2.3.0.99 blueNet2ShutdownAgentTrap NOTIFTYPE "" "" [] map[] Agent shutdown.
+1.3.6.1.4.1.31770.2.4 blueNet2Conformance OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.4.1 blueNet2Compliances OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.4.1.1 blueNet2Compliance MODCOMP "" "" [] map[] The core compliance statement for all BlueNet2 PDU implementations.
+1.3.6.1.4.1.31770.2.4.2 blueNet2Groups OTHER "" "" [] map[] 
+1.3.6.1.4.1.31770.2.4.2.1 blueNet2TrapGroup OBJGROUP "" "" [] map[] Conformance group for all objects contained in BlueNet2 PDU traps.
+1.3.6.1.4.1.31770.2.4.2.2 blueNet2NotificationGroup NOTIFGROUP "" "" [] map[] Conformance group for BlueNet2 PDU notifications.
+1.3.6.1.4.1.31770.2.4.2.3 blueNet2IdentificationGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU base identfication.
+1.3.6.1.4.1.31770.2.4.2.4 blueNet2InformationGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU base information.
+1.3.6.1.4.1.31770.2.4.2.5 blueNet2ConfigurationGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU base configuration.
+1.3.6.1.4.1.31770.2.4.2.6 blueNet2SnmpGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU SNMP configuration.
+1.3.6.1.4.1.31770.2.4.2.7 blueNet2ModbusGroup OBJGROUP "" "" [] map[] Conformance group for blueNet2 PDU modbus configuration.
+1.3.6.1.4.1.31770.2.4.2.8 blueNet2NtpGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU NTP configuration.
+1.3.6.1.4.1.31770.2.4.2.9 blueNet2SmtpGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU SMTP configuration.
+1.3.6.1.4.1.31770.2.4.2.10 blueNet2SyslogGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU syslog operations.
+1.3.6.1.4.1.31770.2.4.2.11 blueNet2DeviceGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU device information.
+1.3.6.1.4.1.31770.2.4.2.12 blueNet2SensorGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU sensor information.
+1.3.6.1.4.1.31770.2.4.2.13 blueNet2CircuitGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU circuit information.
+1.3.6.1.4.1.31770.2.4.2.14 blueNet2PhaseGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU phase information.
+1.3.6.1.4.1.31770.2.4.2.15 blueNet2FuseGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU fuse information.
+1.3.6.1.4.1.31770.2.4.2.16 blueNet2SocketGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU socket information.
+1.3.6.1.4.1.31770.2.4.2.17 blueNet2RcmGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU RCM information.
+1.3.6.1.4.1.31770.2.4.2.18 blueNet2SocketGroupGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU socket groups.
+1.3.6.1.4.1.31770.2.4.2.19 blueNet2VariableGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU variable information.
+1.3.6.1.4.1.31770.2.4.2.20 blueNet2MPGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 Measurement Point information.
+1.3.6.1.4.1.31770.2.4.2.21 blueNet2SpdGroup OBJGROUP "" "" [] map[] Conformance group for BlueNet2 PDU SPD information.
+1.3.6.1.5 security OTHER "" "" [] map[] 
+1.3.6.1.6 snmpV2 OTHER "" "" [] map[] 
+1.3.6.1.6.1 snmpDomains OTHER "" "" [] map[] 
+1.3.6.1.6.2 snmpProxys OTHER "" "" [] map[] 
+1.3.6.1.6.3 snmpModules OTHER "" "" [] map[] 
+1.3.6.1.6.3.1 snmpMIB MODID "" "" [] map[] The MIB module for SNMP entities
+1.3.6.1.6.3.1.1 snmpMIBObjects OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.1.4 snmpTrap OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.1.4.1 snmpTrapOID OBJID "" "" [] map[] The authoritative identification of the notification currently being sent
+1.3.6.1.6.3.1.1.4.3 snmpTrapEnterprise OBJID "" "" [] map[] The authoritative identification of the enterprise associated with the trap currently being sent
+1.3.6.1.6.3.1.1.5 snmpTraps OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.1.5.1 coldStart NOTIFTYPE "" "" [] map[] A coldStart trap signifies that the SNMP entity, supporting a notification originator application, is reinitializing itself and that its configuration may have been altered.
+1.3.6.1.6.3.1.1.5.2 warmStart NOTIFTYPE "" "" [] map[] A warmStart trap signifies that the SNMP entity, supporting a notification originator application, is reinitializing itself such that its configuration is unaltered.
+1.3.6.1.6.3.1.1.5.3 linkDown NOTIFTYPE "" "" [] map[] A linkDown trap signifies that the SNMP entity, acting in an agent role, has detected that the ifOperStatus object for one of its communication links is about to enter the down state from some other state (but not from the notPresent state)
+1.3.6.1.6.3.1.1.5.4 linkUp NOTIFTYPE "" "" [] map[] A linkUp trap signifies that the SNMP entity, acting in an agent role, has detected that the ifOperStatus object for one of its communication links left the down state and transitioned into some other state (but not into the notPresent state)
+1.3.6.1.6.3.1.1.5.5 authenticationFailure NOTIFTYPE "" "" [] map[] An authenticationFailure trap signifies that the SNMP entity has received a protocol message that is not properly authenticated
+1.3.6.1.6.3.1.1.6 snmpSet OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.1.6.1 snmpSetSerialNo INTEGER "TestAndIncr" "" [] map[] An advisory lock used to allow several cooperating command generator applications to coordinate their use of the SNMP set operation
+1.3.6.1.6.3.1.2 snmpMIBConformance OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.2.1 snmpMIBCompliances OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.2.1.2 snmpBasicCompliance MODCOMP "" "" [] map[] The compliance statement for SNMPv2 entities which implement the SNMPv2 MIB
+1.3.6.1.6.3.1.2.1.3 snmpBasicComplianceRev2 MODCOMP "" "" [] map[] The compliance statement for SNMP entities which implement this MIB module.
+1.3.6.1.6.3.1.2.2 snmpMIBGroups OTHER "" "" [] map[] 
+1.3.6.1.6.3.1.2.2.5 snmpSetGroup OBJGROUP "" "" [] map[] A collection of objects which allow several cooperating command generator applications to coordinate their use of the set operation.
+1.3.6.1.6.3.1.2.2.6 systemGroup OBJGROUP "" "" [] map[] The system group defines objects which are common to all managed systems.
+1.3.6.1.6.3.1.2.2.7 snmpBasicNotificationsGroup NOTIFGROUP "" "" [] map[] The basic notifications implemented by an SNMP entity supporting command responder applications.
+1.3.6.1.6.3.1.2.2.8 snmpGroup OBJGROUP "" "" [] map[] A collection of objects providing basic instrumentation and control of an SNMP entity.
+1.3.6.1.6.3.1.2.2.9 snmpCommunityGroup OBJGROUP "" "" [] map[] A collection of objects providing basic instrumentation of a SNMP entity which supports community-based authentication.
+1.3.6.1.6.3.1.2.2.10 snmpObsoleteGroup OBJGROUP "" "" [] map[] A collection of objects from RFC 1213 made obsolete by this MIB module.
+1.3.6.1.6.3.1.2.2.11 snmpWarmStartNotificationGroup NOTIFGROUP "" "" [] map[] An additional notification for an SNMP entity supporting command responder applications, if it is able to reinitialize itself such that its configuration is unaltered.
+1.3.6.1.6.3.1.2.2.12 snmpNotificationGroup OBJGROUP "" "" [] map[] These objects are required for entities which support notification originator applications.

@@ -1,0 +1,157 @@
+# WARNING: This file was auto-generated using snmp_exporter generator, manual changes will be lost.
+pdu_bachmann:
+  walk:
+  - 1.3.6.1.4.1.31770.2.2.8.4.1
+  metrics:
+  - name: blueNet2VariableDataId
+    oid: 1.3.6.1.4.1.31770.2.2.8.4.1.1
+    type: OctetString
+    help: GUID of variable. - 1.3.6.1.4.1.31770.2.2.8.4.1.1
+    indexes:
+    - labelname: blueNet2VariableDataGuid
+      type: OctetString
+  - name: blueNet2VariableDataGuid
+    oid: 1.3.6.1.4.1.31770.2.2.8.4.1.2
+    type: OctetString
+    help: GUID of variable. - 1.3.6.1.4.1.31770.2.2.8.4.1.2
+    indexes:
+    - labelname: blueNet2VariableDataGuid
+      type: OctetString
+  - name: blueNet2VariableDataType
+    oid: 1.3.6.1.4.1.31770.2.2.8.4.1.3
+    type: gauge
+    help: Type of variable. - 1.3.6.1.4.1.31770.2.2.8.4.1.3
+    indexes:
+    - labelname: blueNet2VariableDataGuid
+      type: OctetString
+    enum_values:
+      1: voltage
+      2: peakVoltage
+      5: peakCurrent
+      7: differentialCurrentAc
+      8: differentialCurrentDc
+      9: neutralCurrent
+      16: phaseAngle
+      17: powerFactor
+      18: apparentPower
+      19: activePower
+      20: peakActivePower
+      21: peakActivePowerUser
+      22: reactivePower
+      23: frequency
+      24: peakNeutralCurrent
+      32: apparentEnergyAccumulated
+      33: apparentEnergyDelta
+      34: reactiveEnergyAccumulated
+      35: reactiveEnergyDelta
+      36: activeEnergyAccumulated
+      37: activeEnergyDelta
+      38: activeEnergyAccumulatedUser
+      39: activeEnergyRuntime
+      40: customEnergyRuntimeUser
+      48: fuseState
+      49: orientation
+      50: usb
+      51: socketState
+      52: pduState
+      53: sensorState
+      54: circuitState
+      55: phaseState
+      56: rcdState
+      57: socketGroupState
+      58: globalState
+      64: sensorType
+      65: circuitType
+      66: fuseType
+      67: socketType
+      68: socketColor
+      69: phaseType
+      70: pduType
+      71: rcmType
+      80: deltaVoltage12
+      81: deltaVoltage23
+      82: deltaVoltage31
+      83: rcmACPeak
+      84: rcmDCPeak
+      256: temperature
+      257: humidity
+      258: ioInputChannel1
+      259: ioInputChannel2
+      260: ioInputChannel3
+      261: ioInputChannel4
+      262: ioOutputChannel1
+      263: ioOutputChannel2
+      264: ioOutputChannel3
+      265: ioOutputChannel4
+      266: dewPoint
+      267: pressure
+      268: diffPressure
+      269: co2Equivalent
+      270: tvoc
+      65535: unspecified
+  - name: blueNet2VariableDataStatus
+    oid: 1.3.6.1.4.1.31770.2.2.8.4.1.4
+    type: gauge
+    help: Status of variable. - 1.3.6.1.4.1.31770.2.2.8.4.1.4
+    indexes:
+    - labelname: blueNet2VariableDataGuid
+      type: OctetString
+    enum_values:
+      0: expected
+      1: undefined
+      2: ok
+      3: errorHigh
+      4: errorLow
+      5: warningHigh
+      6: warningLow
+      7: lost
+      8: deactivate
+      9: onAlarmIdentidy
+      10: offAlarmIdentify
+      11: onAlarm
+      12: offAlarm
+      13: onWarningIdentify
+      14: offWarningIdentify
+      15: onWarning
+      16: offWarning
+      17: onIdentify
+      18: offIdentify
+      19: "on"
+      20: "off"
+      21: onChildAlarm
+      22: offChildAlarm
+      23: onChildWarning
+      24: offChildWarning
+      25: childAlarm
+      26: childWarning
+      27: lostChild
+      36: updateInProgress
+      37: updateError
+      38: onGoingSwitch
+      39: high
+      40: low
+      41: alarm
+      42: warning
+      43: ok
+      44: disabled
+      45: fwVersionTooNew
+  - name: blueNet2VariableDataValue
+    oid: 1.3.6.1.4.1.31770.2.2.8.4.1.5
+    type: gauge
+    help: Value of variable. - 1.3.6.1.4.1.31770.2.2.8.4.1.5
+    indexes:
+    - labelname: blueNet2VariableDataGuid
+      type: OctetString
+  - name: blueNet2VariableDataDateTime
+    oid: 1.3.6.1.4.1.31770.2.2.8.4.1.6
+    type: DateAndTime
+    help: Timestamp of variable. - 1.3.6.1.4.1.31770.2.2.8.4.1.6
+    indexes:
+    - labelname: blueNet2VariableDataGuid
+      type: OctetString
+  version: 2
+  max_repetitions: 25
+  retries: 3
+  timeout: 5s
+  auth:
+    community: ubone42

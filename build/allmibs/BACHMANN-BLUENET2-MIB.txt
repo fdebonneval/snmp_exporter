@@ -2970,7 +2970,7 @@ blueNet2Mib MODULE-IDENTITY
         MAX-ACCESS          not-accessible
         STATUS              current
         DESCRIPTION         "Entries of socket table."
-        INDEX               { blueNet2SocketDevice,blueNet2SocketCircuit,blueNet2SocketPhase,blueNet2SocketIndex }
+        INDEX               { blueNet2SocketDevice,blueNet2SocketCircuit,blueNet2SocketPhase,blueNet2SocketFuse,blueNet2SocketIndex }
         ::=                 { blueNet2SocketTable 1 }
 
     BlueNet2SocketEntry     ::=
